@@ -18,7 +18,6 @@ function Nav() {
 const useStyles = makeStyles((theme) => ({
     nav: {
         backgroundColor: theme.palette.common.black,
-        height: "5vh"
     },
 }));
 
