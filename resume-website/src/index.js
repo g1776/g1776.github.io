@@ -19,7 +19,7 @@ import About from './components/About';
 
 
 ReactDOM.render(
-  <div style={{backgroundColor: "rgb(35,31,32)"}}>
+  <div>
   <ThemeProvider theme={theme}>
     <CssBaseline />
     <HashRouter>
