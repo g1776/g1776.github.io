@@ -19,19 +19,24 @@ import About from './components/About';
 
 
 ReactDOM.render(
-  <div>
+  <div style={{display: "flex", flexFlow: "column", height: "100%"}}>
   <ThemeProvider theme={theme}>
     <CssBaseline />
     <HashRouter>
-      <Nav/>
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/resume" component={Resume} />
-        <Route path="/about" component={About} />
-        <Redirect to="/" />
-      </Switch>
+      <Nav style={{flex: "0 1 auto"}}/>
+      <div style={{flex: "1 1 auto"}}>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/resume" component={Resume} />
+          <Route path="/about" component={About} />
+          <Redirect to="/" />
+        </Switch>
+      </div>
     </HashRouter>
   </ThemeProvider>
   </div>,
   document.getElementById('root')
 );
+
+
+

@@ -12,10 +12,10 @@ function Home() {
   return (
     <main className={classes.root}>
       <Tilt 
-      style={{display:"block", width: "80vw", height:"100%", margin: "auto"}}
+      style={{width: "75vw", margin: "auto"}}
       >
         <Paper className={classes.card}>
-          <Grid container style={{height: "100%"}}>
+          <Grid container>
             <Grid item xs={12} lg={8}>
               <Typography variant="h2">Gregory Glatzer</Typography>
               <div className={classes.spacer}></div>
@@ -40,7 +40,6 @@ function Home() {
             </Grid>
             <Grid item xs={12} lg={4} container style={{justifyContent: "center", alignItems: "center"}}>
               <img src={process.env.PUBLIC_URL + '/meTransparent.png'} style={{width: "70%", height: "auto"}}></img>
-            
             </Grid>
           </Grid>
         </Paper>
@@ -53,15 +52,12 @@ function Home() {
 const useStyles = makeStyles((theme) => ({
   root: {
     padding: theme.spacing(5),
-    background: `linear-gradient(to bottom, ${theme.palette.common.black} 60%, white 40%)`,
-    height: "100%",
     display: "flex",
-    flexDirection: "column",
-    justifyContent: "center"
+    height: "100%",
+    background: `linear-gradient(to bottom, ${theme.palette.common.black} 60%, white 40%)`,
   },
   introParagraph: {
     marginBottom: "1.2em",
-    fontSize: "1.1vw"
   },
   spacer: {
     margin: theme.spacing(1)
@@ -70,7 +66,7 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(3)
   },
   card: {
-    height: "100%",
+    margin: "auto",
     padding: theme.spacing(3),
     backgroundColor: "#153040",
     color: "white"
