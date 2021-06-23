@@ -19,7 +19,7 @@ import Projects from './components/Projects';
 
 
 ReactDOM.render(
-  <div style={{display: "flex", flexFlow: "column", height: "100%"}}>
+  <div style={{display: "flex", flexFlow: "column", height: "100%", backgroundColor: theme.palette.common.black}}>
   <ThemeProvider theme={theme}>
     <CssBaseline />
     <HashRouter>

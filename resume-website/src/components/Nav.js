@@ -19,7 +19,7 @@ function Nav() {
     }
 
     return (
-    <nav className={classes.nav}>
+    <nav>
         <Grid container style={{justifyContent: "center", alignItems: "center", padding: 20}} spacing={5}>
             <Section to="/">About</Section>
             <Section to="/resume">Resume</Section>
@@ -35,9 +35,6 @@ function Nav() {
 }
 
 const useStyles = makeStyles((theme) => ({
-    nav: {
-        backgroundColor: theme.palette.common.black,
-    },
     linkContainer: {
         textAlign: "center",
     }
