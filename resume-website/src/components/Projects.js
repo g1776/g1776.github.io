@@ -1,6 +1,6 @@
 
 
-function About() {
+function Projects() {
     return (
     <div>
         This is the about page
@@ -8,4 +8,4 @@ function About() {
     );
 }
 
-export default About;
+export default Projects;

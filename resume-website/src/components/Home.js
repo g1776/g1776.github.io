@@ -54,7 +54,7 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(5),
     display: "flex",
     height: "100%",
-    background: `linear-gradient(to bottom, ${theme.palette.common.black} 60%, white 40%)`,
+    background: `linear-gradient(180deg, ${theme.palette.common.black} 50%, white 50%)`,
   },
   introParagraph: {
     marginBottom: "1.2em",

@@ -20,6 +20,9 @@ palette: {
     default: '#fff',
     },
 },
+typography: {
+    fontFamily: 'Poppins, sans-serif'
+},
 });
 
 export default theme;

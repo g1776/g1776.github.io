@@ -15,7 +15,7 @@ import './style.css'
 import Nav from './components/Nav';
 import Home from './components/Home';
 import Resume from './components/Resume';
-import About from './components/About';
+import Projects from './components/Projects';
 
 
 ReactDOM.render(
@@ -28,7 +28,7 @@ ReactDOM.render(
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/resume" component={Resume} />
-          <Route path="/about" component={About} />
+          <Route path="/projects" component={Projects} />
           <Redirect to="/" />
         </Switch>
       </div>
