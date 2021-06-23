@@ -8,24 +8,22 @@ import { makeStyles } from '@material-ui/core/styles'
 function Nav() {
     const classes = useStyles();
 
+    const Section = (props) => {
+        return (
+            <Grid item xs={12} md={"auto"} className={classes.linkContainer}> 
+                <Link to={props.to}>
+                    <Typography component="h3" variant="h5">{props.children}</Typography>
+                </Link>
+            </Grid>
+        )
+    }
+
     return (
     <nav className={classes.nav}>
-        <Grid container style={{justifyContent: "center", alignItems: "center", padding: 20}} spacing={10}>
-            <Grid item> 
-                <Link to="/">
-                    <Typography component="h3" variant="h5">About</Typography>
-                </Link>
-            </Grid>
-            <Grid item>
-                <Link to="/resume">
-                    <Typography component="h3" variant="h5">Resume</Typography>
-                </Link>
-            </Grid>
-            <Grid item>
-                <Link to="/projects">
-                    <Typography component="h3" variant="h5">Projects</Typography>
-                </Link>
-            </Grid>
+        <Grid container style={{justifyContent: "center", alignItems: "center", padding: 20}} spacing={5}>
+            <Section to="/">About</Section>
+            <Section to="/resume">Resume</Section>
+            <Section to="/projects">Projects</Section>
         </Grid>
         {/* <ul>
         
@@ -40,6 +38,9 @@ const useStyles = makeStyles((theme) => ({
     nav: {
         backgroundColor: theme.palette.common.black,
     },
+    linkContainer: {
+        textAlign: "center",
+    }
 }));
 
 export default Nav;
