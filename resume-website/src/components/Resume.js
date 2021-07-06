@@ -1,4 +1,3 @@
-import PDF from 'react-pdf-js-infinite';
 import {
     Paper,
     Container,
@@ -14,8 +13,7 @@ import theme from '../theme';
 import React from 'react';
 
 
-const Contact = (props) => {
-    const {github, email, linkedin} = props
+const Contact = () => {
 
     const ContactThumb = ({link, label, Icon, xs=3}) => (
         <Grid item container xs={xs} style={{justifyContent: "center", alignItems: "center"}}>
@@ -33,24 +31,13 @@ const Contact = (props) => {
     )
 }
 
-const pdfView = () => {
-    return (
-        <div style={{backgroundColor: theme.palette.common.black, textAlign: "center", height: "100%"}}>
-            <Paper style={{margin: "10%", padding: 10, textAlign: "center"}}>
-                <PDF file={`http://localhost:3000/resume.pdf`} scale={1.5}/>
-            </Paper>
-        </div>
-    )
-}
-
 
 function Resume() {
     return (
         <Container>
             <Typography variant="h1" style={{color: "white"}}>Resume</Typography>
-            <Contact github="www.github.com/g1776" email="gregoryg323@gmail.com" linkedin="www.linkedin.com/in/gregory-glatzer"/>
+            <Contact/>
             <hr/>
-            <Divider style={{marginTop: 20, marginBottom: 20}}/>
         </Container>
         
     );
