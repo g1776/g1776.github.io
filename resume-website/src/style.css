@@ -27,13 +27,3 @@ body, html, #root, ul {
 .nav-link:hover::after{
     height: calc(100% + 8px)
 }
-
-hr {
-    position: relative;
-    top: 20px;
-    border: none;
-    height: 12px;
-    background: #153040;
-    margin-bottom: 50px;
-    clip-path: polygon(1% 0%, 100% 0, 99% 100%, 0% 100%);
-}
