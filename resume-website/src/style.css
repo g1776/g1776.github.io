@@ -5,14 +5,14 @@ body, html, #root, ul {
     overflow-x: hidden;
 }
 
-a{
+.nav-link{
     display: block;
     color: white;
     text-decoration: none;
     position: relative;
 }
 
-a::after{
+.nav-link::after{
     content: "";
     background: white;
     mix-blend-mode: exclusion;
@@ -24,6 +24,16 @@ a::after{
     transition: all .4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 
-a:hover::after{
+.nav-link:hover::after{
     height: calc(100% + 8px)
+}
+
+hr {
+    position: relative;
+    top: 20px;
+    border: none;
+    height: 12px;
+    background: #153040;
+    margin-bottom: 50px;
+    clip-path: polygon(1% 0%, 100% 0, 99% 100%, 0% 100%);
 }

@@ -11,7 +11,7 @@ function Nav() {
     const Section = (props) => {
         return (
             <Grid item xs={12} md={"auto"} className={classes.linkContainer}> 
-                <Link to={props.to}>
+                <Link to={props.to} className="nav-link">
                     <Typography component="h3" variant="h5">{props.children}</Typography>
                 </Link>
             </Grid>
