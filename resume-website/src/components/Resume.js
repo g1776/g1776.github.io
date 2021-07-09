@@ -11,6 +11,8 @@ import theme from '../theme';
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
+import Blob from './Blob';
+
 
 const Header = (props) => {
     return (
@@ -85,7 +87,23 @@ function Resume() {
 
 
     return (
+        <React.Fragment>
+        <div style={{zIndex: 1}}>
+            {/* <canvas id="my-canvas" style={{position: "absolute", top: "50%", left: 0, width: "10%"}}></canvas>
+            <Blob id="my-canvas"/> */}
+            <canvas id="my-canvas2" style={{position: "absolute", top: "100%", left: "80%", width: "30%"}}></canvas>
+            <Blob id="my-canvas2"/>
+            <canvas id="my-canvas3" style={{position: "absolute", top: "170%", left: "5%", width: "5%"}}></canvas>
+            <Blob id="my-canvas3"/>
+            <canvas id="my-canvas4" style={{position: "absolute", top: "300%", left: "3%", width: "30%"}}></canvas>
+            <Blob id="my-canvas4"/>
+            <canvas id="my-canvas5" style={{position: "absolute", top: "500%", left: "60%", width: "10%"}}></canvas>
+            <Blob id="my-canvas5"/>
+            <canvas id="my-canvas6" style={{position: "absolute", top: "620%", left: "5%", width: "7%"}}></canvas>
+            <Blob id="my-canvas6"/>
+        </div>
         <Container className={classes.root} maxWidth="md">
+            
             <Typography variant="h2" className={classes.title}>Resume</Typography>
             <Contact/>
             <hr className={classes.hrFancy}/>
@@ -191,6 +209,7 @@ function Resume() {
             </Section>
 
         </Container>
+        </React.Fragment>
         
     );
     
@@ -199,7 +218,11 @@ function Resume() {
 const useStyles = makeStyles((theme) => ({
     root: {
         height: "100%",
-        backgroundColor: theme.palette.common.black
+        backgroundColor: "transparent",
+        position: "absolute",
+        top: "70%",  
+        left: "50%",
+        transform: "translate(-50%, -50%)"
     },
     title: {
         color: "white", 
