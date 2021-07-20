@@ -12,6 +12,7 @@ const Blob = (props) => {
     function handleCanvas(canvas) {
         var myCanvas = document.getElementById(
             id);
+        
         myBlob = new DrawBlob({
             vectors: generatePoints({ sides: 5 }),
             canvas: myCanvas,

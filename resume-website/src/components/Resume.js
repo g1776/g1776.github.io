@@ -56,7 +56,7 @@ function Resume() {
     }
 
     const Experience = (props) => {
-        let { group, position, dateStart, dateEnd, bullets} = props;
+        let { group, position, dateStart, dateEnd, bullets, image = undefined, imgHeight = undefined, imgWidth = undefined} = props;
 
         let datePair = undefined;
 
@@ -69,17 +69,23 @@ function Resume() {
 
         return (
         <Grid container style={{justifyContent: "space-between", paddingBottom: theme.spacing(7)}} spacing={3}>
-            <Grid item xs={12} md={8}>
+            <Grid item xs={12} md={7}>
                 <Typography variant="h5"><b>{group}</b>{position}</Typography>
             </Grid>
-            <Grid item xs={12} md={4}>
+            <Grid item container xs={12} md={5} justify="flex-end">
                 <Typography variant="h6">{datePair}</Typography>
             </Grid>
-            <Grid item xs={12}>
+            <Grid item xs={12} md={image === undefined ? 12 : 8}>
                 {bullets.map((b, i) => (
                     <Typography variant="body1" style={{paddingBottom: theme.spacing(2)}}>- {b}</Typography>
                 ))}
             </Grid>
+            {
+                image !== undefined && 
+                    <Grid container item xs={12} md={4} style={{alignItems: "center", justifyContent: "flex-end"}}>
+                        <img src={process.env.PUBLIC_URL + image} width={imgWidth} height={imgHeight}></img>
+                    </Grid>
+            }
         </Grid>
         )
         
@@ -91,16 +97,14 @@ function Resume() {
         <div style={{zIndex: 1}}>
             {/* <canvas id="my-canvas" style={{position: "absolute", top: "50%", left: 0, width: "10%"}}></canvas>
             <Blob id="my-canvas"/> */}
-            <canvas id="my-canvas2" style={{position: "absolute", top: "100%", left: "80%", width: "30%"}}></canvas>
+            <canvas id="my-canvas2" style={{position: "absolute", top: "100%", left: "80%", width: "25%"}}></canvas>
             <Blob id="my-canvas2"/>
-            <canvas id="my-canvas3" style={{position: "absolute", top: "170%", left: "5%", width: "5%"}}></canvas>
+            <canvas id="my-canvas3" style={{position: "absolute", top: "170%", left: "5%", width: "10%"}}></canvas>
             <Blob id="my-canvas3"/>
-            <canvas id="my-canvas4" style={{position: "absolute", top: "300%", left: "3%", width: "30%"}}></canvas>
+            <canvas id="my-canvas4" style={{position: "absolute", top: "300%", left: "3%", width: "25%"}}></canvas>
             <Blob id="my-canvas4"/>
             <canvas id="my-canvas5" style={{position: "absolute", top: "500%", left: "60%", width: "10%"}}></canvas>
             <Blob id="my-canvas5"/>
-            <canvas id="my-canvas6" style={{position: "absolute", top: "620%", left: "5%", width: "7%"}}></canvas>
-            <Blob id="my-canvas6"/>
         </div>
         <Container className={classes.root} maxWidth="md">
             
@@ -127,6 +131,8 @@ function Resume() {
                 position="Team member and CTO"
                 dateStart="May 2020"
                 dateEnd="May 2021"
+                image="OpenVessel Logo.png"
+                imgWidth={200}
                 bullets={[
                     "Led a technical team of 14 for over 200 hours through full stack development of a Flask webapp.",
                     "Worked with Penn State Hershey Medical Center Clinical Radiology Research Group (CRRG) radiologists to develop a liver-lesion detection and classification system using Convolutional Neural Networks with Tensorflow.",
@@ -138,6 +144,8 @@ function Resume() {
                 position="Personal Project"
                 dateStart="November 2020"
                 dateEnd="Present"
+                image="IntonationMap Logo.png"
+                imgWidth={200}
                 bullets={[
                     "Developed a full stack website that gathers and analyzes intonation data for woodwind players.",
                     "Visualized real-time data with interactive visualizations made with recharts.js",
@@ -214,6 +222,7 @@ function Resume() {
     );
     
 }
+
 
 const useStyles = makeStyles((theme) => ({
     root: {
