@@ -23,9 +23,9 @@ const Header = (props) => {
 
 const Contact = () => {
 
-    const ContactThumb = ({link, label, Icon, lg=3}) => (
+    const ContactThumb = ({link, label, Icon, lg=4}) => (
         <Grid item container xs={12} lg={lg} style={{justifyContent: "center", alignItems: "center"}}>
-            <Link href={link}><Icon fontSize="medium" style={{marginRight: theme.spacing(2), top: 5, position: "relative"}}/><Typography variant="body2" style={{color: "white", display: "inline"}}>{label}</Typography></Link>
+            <Link href={link}><Icon fontSize="large" style={{marginRight: theme.spacing(1), top: 10, position: "relative"}}/><Typography variant="body1" style={{color: "white", display: "inline"}}>{label}</Typography></Link>
         </Grid>
     )
 
@@ -33,7 +33,7 @@ const Contact = () => {
         <Grid container style={{justifyContent: "center", alignItems: "center"}}>
             <ContactThumb link="https://github.com/g1776" label="github.com/g1776" Icon={GitHubIcon} />
             <ContactThumb link="mailto:gregoryg323@gmail.com" label="gregoryg323@gmail.com" Icon={EmailIcon} />
-            <ContactThumb lg={4} link="https://www.linkedin.com/in/gregory-glatzer" label="linkedin.com/in/gregory-glatzer" Icon={LinkedInIcon} />
+            <ContactThumb link="https://www.linkedin.com/in/gregory-glatzer" label="linkedin.com/in/gregory-glatzer" Icon={LinkedInIcon} />
         </Grid>
     )
 }
@@ -68,7 +68,7 @@ function Resume() {
         }
 
         return (
-        <Grid container style={{justifyContent: "space-between", paddingBottom: theme.spacing(7)}} spacing={3}>
+        <Grid container style={{justifyContent: "space-between", paddingBottom: theme.spacing(7)}} spacing={4}>
             <Grid item xs={12} md={7}>
                 <Typography variant="h5"><b>{group}</b>{position}</Typography>
             </Grid>
@@ -77,7 +77,7 @@ function Resume() {
             </Grid>
             <Grid item xs={12} md={image === undefined ? 12 : 8}>
                 {bullets.map((b, i) => (
-                    <Typography variant="body1" style={{paddingBottom: theme.spacing(2)}}>- {b}</Typography>
+                    <Typography variant="h6" style={{paddingBottom: theme.spacing(2)}}>- {b}</Typography>
                 ))}
             </Grid>
             {
@@ -97,16 +97,16 @@ function Resume() {
         <div style={{zIndex: 1}}>
             {/* <canvas id="my-canvas" style={{position: "absolute", top: "50%", left: 0, width: "10%"}}></canvas>
             <Blob id="my-canvas"/> */}
-            <canvas id="my-canvas2" style={{position: "absolute", top: "100%", left: "80%", width: "25%"}}></canvas>
+            <canvas id="my-canvas2" style={{position: "absolute", top: "100%", left: "80%", width: "23%"}}></canvas>
             <Blob id="my-canvas2"/>
             <canvas id="my-canvas3" style={{position: "absolute", top: "170%", left: "5%", width: "10%"}}></canvas>
             <Blob id="my-canvas3"/>
-            <canvas id="my-canvas4" style={{position: "absolute", top: "300%", left: "3%", width: "25%"}}></canvas>
+            <canvas id="my-canvas4" style={{position: "absolute", top: "300%", left: "3%", width: "23%"}}></canvas>
             <Blob id="my-canvas4"/>
             <canvas id="my-canvas5" style={{position: "absolute", top: "500%", left: "60%", width: "10%"}}></canvas>
             <Blob id="my-canvas5"/>
         </div>
-        <Container className={classes.root} maxWidth="md">
+        <div className={classes.root} maxWidth="md">
             
             <Typography variant="h2" className={classes.title}>Resume</Typography>
             <Contact/>
@@ -132,7 +132,7 @@ function Resume() {
                 dateStart="May 2020"
                 dateEnd="May 2021"
                 image="OpenVessel Logo.png"
-                imgWidth={200}
+                imgWidth={"100%"}
                 bullets={[
                     "Led a technical team of 14 for over 200 hours through full stack development of a Flask webapp.",
                     "Worked with Penn State Hershey Medical Center Clinical Radiology Research Group (CRRG) radiologists to develop a liver-lesion detection and classification system using Convolutional Neural Networks with Tensorflow.",
@@ -145,7 +145,7 @@ function Resume() {
                 dateStart="November 2020"
                 dateEnd="Present"
                 image="IntonationMap Logo.png"
-                imgWidth={200}
+                imgWidth={"100%"}
                 bullets={[
                     "Developed a full stack website that gathers and analyzes intonation data for woodwind players.",
                     "Visualized real-time data with interactive visualizations made with recharts.js",
@@ -153,14 +153,31 @@ function Resume() {
                     <span>Check it out here: <Link href="https://www.intonationmap.com">https://www.intonationmap.com</Link></span>
                 ]}/>
                 <Experience
+                group="Elephant Movement Research with Penn State College of Information Science and Technology Faculty"
+                position="Researcher"
+                dateStart="May 2021"
+                dateEnd="Present"
+                image=""
+                bullets={[
+                    "First author on the research paper “An Analysis of Elephants’ Movement Data in Sub-Saharan Africa Using Clustering”",
+                    "Applied DBSCAN clustering to elephant data and used centroids to predict locations of interest for elephants.",
+                    "Conducted a literature review of anti-poaching technologies.",
+                    "Demonstrated initiative and the ability to create self-driven work."
+                ]}
+                >
+                </Experience>
+                <Experience
                 group="EY sponsored project"
                 position="Team member"
                 dateStart="November 2019"
                 dateEnd="November 2020"
+                image="EY and NDL.png"
+                imgWidth={"100%"}
                 bullets={[
                     "Worked in a team of 3 for over 170 hours on a customizable dashboard that helps consultants better understand the companies they are working with.",
                     "Developed web scraping scripts to gather stock, legal, and twitter information.",
-                    "Visualized results with interactive graphs made with Bokeh."
+                    "Visualized results with interactive graphs made with Bokeh.",
+                    "Project acquired through Nittany Data Labs (NDL)."
                 ]}/>
             </Section>
             
@@ -175,12 +192,12 @@ function Resume() {
             </Section>
 
             <Section header="Skills" hideAccent>
-                <Typography variant="body1">
+                <Typography variant="h6">
                 <Grid container spacing={6}>
                     <Grid item xs={12} md={4}>
                         <b>Data Science/ Machine Learning</b>
                         <hr className={classes.hrAccentSkills}/>
-                        <ul>
+                        <ul className={classes.skills}>
                             <li>Python</li>
                             <li>Scikit-learn</li>
                             <li>SQL</li>
@@ -194,7 +211,7 @@ function Resume() {
                     <Grid item xs={12} md={4}>
                         <b>Web development</b>
                         <hr className={classes.hrAccentSkills}/>
-                        <ul>
+                        <ul className={classes.skills}>
                             <li>React, Flask</li>
                             <li>HTML/CSS, JavaScript</li>
                             <li>Bootstrap</li>
@@ -206,7 +223,7 @@ function Resume() {
                     <Grid item xs={12} md={4}>
                         <b>Other</b>
                         <hr className={classes.hrAccentSkills}/>
-                        <ul>
+                        <ul className={classes.skills}>
                             <li>All-national, all-eastern, all-state clarinetist</li>
                             <li>Saxophonist</li>
                             <li>Flautist</li>
@@ -216,7 +233,7 @@ function Resume() {
                 </Typography>
             </Section>
 
-        </Container>
+        </div>
         </React.Fragment>
         
     );
@@ -227,6 +244,7 @@ function Resume() {
 const useStyles = makeStyles((theme) => ({
     root: {
         height: "100%",
+        width: "80%",
         backgroundColor: "transparent",
         position: "absolute",
         top: "70%",  
@@ -265,6 +283,12 @@ const useStyles = makeStyles((theme) => ({
         color: "white", 
         paddingTop: theme.spacing(8), 
         paddingBottom: theme.spacing(3)
+    },
+    skills: {
+        margin: 0,
+        padding: 0,
+        height: '100%',
+        overflowX: 'hidden'
     }
 }))
 

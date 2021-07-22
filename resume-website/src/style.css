@@ -7,10 +7,14 @@ body, html, #root {
 }
 
 ul {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    overflow-x: hidden;
+    list-style-type: none;
+}
+
+ul>li:before{
+    display: inline-block;
+    content: "-";
+    width: 1em;
+    margin-left: -1em;
 }
 
 .nav-link{
@@ -34,4 +38,12 @@ ul {
 
 .nav-link:hover::after{
     height: calc(100% + 8px)
+}
+
+a.regularLink{
+    color: lightblue
+}
+
+a.regularLink:visited{
+    color: darkcyan
 }

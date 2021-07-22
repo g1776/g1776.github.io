@@ -2,7 +2,7 @@ import { red } from '@material-ui/core/colors';
 import { createMuiTheme } from '@material-ui/core/styles';
 
 // A custom theme for this app
-const theme = createMuiTheme({
+let theme = createMuiTheme({
 palette: {
     common: {
         black: "rgb(35,31,32)"
