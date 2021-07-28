@@ -32,7 +32,7 @@ const Projects = (props) => {
                 </Grid>
                 {
                 image !== undefined && 
-                    <Grid container item xs={12} md={4} style={{alignItems: "center", justifyContent: "flex-end"}}>
+                    <Grid container item xs={12} md={4} style={{alignItems: "center", justifyContent: "center"}}>
                         <img src={process.env.PUBLIC_URL + image} width={imgWidth} height={imgHeight}></img>
                     </Grid>
                 }
@@ -84,12 +84,40 @@ const Projects = (props) => {
                     <li>Technical Writing</li>
                 </ul>
             </Project>
+
+            <Project
+            title="The Mental Health Project"
+            subtitle="Frontend Developer - UI/UX"
+            image="TMHP.jfif"
+            imgWidth="50%"
+            noAccent
+            >
+            <p>
+                This project is a team for the 2021 Nittany AI Challenge. We are building a Clinical Decision Support (CDS) tool to aid mental health profesionals in the intake process.
+                Using machine learning processes hosted on Azure, we are processing hand-written forms and displaying the summarized results in custom-built dashboard. My main role throughout this project has 
+                been developing the frontend, using React.js with Material UI. It has been an exciting project so far, and we are currently working towards the final MVP of the competition, with the final pitch in September.
+            </p>
+            <p>
+                Throughout this project I have learned a lot. My UI skills have greatly improved as I try to understand the vision of my teammates and bring the product to life. We have adhered to a strict theming and styling philosophy, which needs to reflected in my work. 
+                I have been consulted by several UI experts, and have taken their feedback and adjusted the product accordingly.
+            </p>
+            <p>
+                In addition to UI skills, I have also learned how to implement an API to fetch and updated data from the backend. This was a new structure to a project that I had not done before, and I needed to be open to learning a new way of building a prototype. Finally,  
+                I got exposure to the world of mental health, and the unique issues and poain points experienced by professionals in the field that can be addressed with technology solutions. Some skills I learned throughout this experience have been:
+            </p>
+            <ul>
+                    <li>Iterative design of UI interfaces</li>
+                    <li>Working with an in-house API</li>
+                    <li>Adapting to feedback from UI professionals</li>
+                    <li>Working with the Material UI CSS framework</li>
+                </ul>
+            </Project>
                 
             <Project
             title="EY-mentored project"
             subtitle="Dashboard application for Tax, Audit, and Consulting"
             image="EY and NDL.png"
-            imgWidth={'100%'}
+            imgWidth={'60%'}
             >
                 <p>
                     In this project, I worked in a team of 3 to develop a dashboard aimed at helping consultants with their day-to-day operations. The concept behind the project was that a consultant could come to the dashboard before a meeting
@@ -129,6 +157,27 @@ const Projects = (props) => {
             </p>
             <p>You can check out my GitHub repo for this project at <a className="regularLink" href="https://github.com/g1776/OthelloAI" target="_blank">https://github.com/g1776/OthelloAI</a></p>
             </Project>
+
+            <Project
+            title="Analyzing Musician Wages with R"
+            subtitle="Personal project"
+            image="new-music-organizing-caucus.png"
+            imgWidth={'60%'}
+            >
+            <p>
+                Growing up I was surrounded by music. My father played piano nearly every day, and my sister the clarinet. In 4th grade, I picked up the clarinet and joined the school band. Since then, I have been in countless bands, orchestras, and jazz bands, playing clarinet, saxophone, and flute. 
+                When I started this project, I was excited to find a dataset created by the New Music Organizing Caucus, which gathers information about gigs of musicians. I then compare this dataset to information gathered from the Bureau of Labor Statistics on musicians and singers. This allows me to validate the data gathered from the Caucus, and analyze the distribution of musicians across the country, as well as the nature of the gigs they are getting.
+            </p>
+            <p>
+                This project has been the biggest project in R I have done to date. I learned many useful skills, including ggplot graphing tools, and dataframe manipulating with tidyverse tools. This was my final project submission for STAT 184: Introduction to R at Penn State. 
+                An precursor to this final report was EDA of the data sources which can be found <a className="regularLink" href={process.env.PUBLIC_URL + "STAT 184 Final Project EDA.html"} target="_blank">here</a>.
+            </p>
+            <p>
+                The final report can be found <a className="regularLink" href={process.env.PUBLIC_URL + "STAT 184 Final Project Report - Musician Wages Analysis.html"} target="_blank">here</a>.
+            </p>
+            </Project>
+
+            
 
         </Grid>
     </Container>

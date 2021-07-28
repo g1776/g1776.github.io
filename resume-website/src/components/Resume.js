@@ -109,6 +109,9 @@ function Resume() {
         <div className={classes.root} maxWidth="md">
             
             <Typography variant="h2" className={classes.title}>Resume</Typography>
+            <Typography variant="h5" className={classes.resumePdf}>
+                View my resume as a pdf <a href={process.env.PUBLIC_URL + '/resume.pdf'} target="blank_" className="regularLink">here</a>.
+            </Typography>
             <Contact/>
             <hr className={classes.hrFancy}/>
             <hr className={classes.hrAccent}/>
@@ -122,7 +125,25 @@ function Resume() {
             <b>The Pennsylvania State University, College of Information Sciences and Technology</b><br/>
             B.S. Applied Data Science<br/>
             August 2019 – May 2023<br/>
-            Cumulative GPA: 3.95<br/>
+            Cumulative GPA: 3.95<br/><br/>
+            <b>Relevant Coursework</b>
+            <ul className={classes.skills}>
+                <li>CMPSC 131 - Programming and Computation I: Fundamentals</li>
+                <li>CMPSC 132 - Programming and Computation II: Data Structures</li>
+
+                <li>DS 200 - Introduction to Data Science</li>
+                <li>DS 220 - Data Management for Data Sciences</li>
+
+                <li>IST 110 - Introduction to Information, People And Technology</li>
+                <li>IST 111S - Seminar in Information Sciences and Technology</li>
+                <li>IST 210 - Organization of Data</li>
+                <li>IST 230 - Language, Logic, and Discrete Mathematics</li>
+
+                <li>MATH 220 - Matrices</li>
+
+                <li>STAT 200 - Elementary Statistics</li>
+                <li>STAT 318 - Elementary Probability</li>
+            </ul>
             </Section>
 
             <Section header="Experience">
@@ -157,7 +178,8 @@ function Resume() {
                 position="Researcher"
                 dateStart="May 2021"
                 dateEnd="Present"
-                image=""
+                image="Range Cluster Hotspots.png"
+                imgWidth="80%"
                 bullets={[
                     "First author on the research paper “An Analysis of Elephants’ Movement Data in Sub-Saharan Africa Using Clustering”",
                     "Applied DBSCAN clustering to elephant data and used centroids to predict locations of interest for elephants.",
@@ -167,12 +189,12 @@ function Resume() {
                 >
                 </Experience>
                 <Experience
-                group="EY sponsored project"
+                group="EY-mentored project"
                 position="Team member"
                 dateStart="November 2019"
                 dateEnd="November 2020"
                 image="EY and NDL.png"
-                imgWidth={"100%"}
+                imgWidth={"60%"}
                 bullets={[
                     "Worked in a team of 3 for over 170 hours on a customizable dashboard that helps consultants better understand the companies they are working with.",
                     "Developed web scraping scripts to gather stock, legal, and twitter information.",
@@ -255,6 +277,11 @@ const useStyles = makeStyles((theme) => ({
         color: "white", 
         paddingBottom: theme.spacing(5), 
         paddingTop: theme.spacing(5),
+        textAlign: "center"
+    },
+    resumePdf: {
+        color: "white", 
+        paddingBottom: theme.spacing(5), 
         textAlign: "center"
     },
     hrAccent: {
