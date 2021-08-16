@@ -16,6 +16,8 @@ const legend = {
     OP: "Observations and practice",
     BL: "Building-level score",
     TSD: "Teacher-specific data",
+    "TSD (2 or 3 Measures)": "Teacher-specific data",
+    "TSD (1 Measure)": "Teacher-specific data",
     LEA: "LEA Selected Measures",
     PG: "Performance Goals"
 
@@ -25,8 +27,6 @@ const Header = (props) => <Box style={{textAlign: "center"}}><Typography variant
 
 
 const colors = {
-    aqua: "#00ffff",
-    azure: "#f0ffff",
     beige: "#f5f5dc",
     black: "#000000",
     blue: "#0000ff",
@@ -49,12 +49,6 @@ const colors = {
     green: "#008000",
     indigo: "#4b0082",
     khaki: "#f0e68c",
-    lightblue: "#add8e6",
-    lightcyan: "#e0ffff",
-    lightgreen: "#90ee90",
-    lightgrey: "#d3d3d3",
-    lightpink: "#ffb6c1",
-    lightyellow: "#ffffe0",
     lime: "#00ff00",
     magenta: "#ff00ff",
     maroon: "#800000",
@@ -132,7 +126,7 @@ const TeacherPie = (props) => {
             <Box style={{textAlign:"center", marginTop: '20px'}}>
                 <Button 
                     variant="outlined" 
-                    style={{backgroundColor: "steelblue"}} 
+                    style={{backgroundColor: "lightblue"}} 
                     size="large"
                     onClick={handleClick}
                 >
@@ -337,9 +331,10 @@ const TeacherPie = (props) => {
                 </div>
             </>
             :
-            
+            <Box style={{backgroundColor: "white", height: "100%"}}>
+                <Box style={{textAlign: "center", backgroundColor: "white"}}><Typography variant="h3" style={{fontWeight: 1000, marginBottom: '30px'}}>Your Evaluation Pie Chart</Typography></Box>
                 <Grid container>
-                    <Grid item xs={5} style={{backgroundColor: "whitesmoke", float: "left", borderRight: "2px solid #333"}}>
+                    <Grid item xs={5} style={{backgroundColor: "white", float: "left", borderRight: "2px solid #333"}}>
                         <Container style={{paddingTop: '20px'}}>
                             <Box style={{textAlign: "center"}}><Typography variant="h3" style={{fontWeight: 1000, marginBottom: '30px'}}>Your Answers</Typography></Box>
                             {
@@ -375,7 +370,7 @@ const TeacherPie = (props) => {
                         </Container>
                     </Grid>
                     <Grid item xs={7}>
-                    <div style={{backgroundColor:"white", height: "100vh", textAlign: "center"}}>
+                    <div style={{backgroundColor:"white", height: "80vh", textAlign: "center"}}>
                         <PieChart
                             data={
                                 pie.current.map(slice => ({ title: slice.label, value: slice.value, color: slice.color.rgb}))
@@ -403,6 +398,7 @@ const TeacherPie = (props) => {
                         </div>
                     </Grid>
                 </Grid>
+            </Box>
             }
         </>
     )
