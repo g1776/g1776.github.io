@@ -1,5 +1,6 @@
-import React, { useState, useRef, useEffect, useCallback } from 'react'
+import React, { useState, useRef } from 'react'
 import { PieChart } from 'react-minimal-pie-chart';
+import ReactTooltip from 'react-tooltip';
 import {
     Grid,
     Typography,
@@ -11,7 +12,17 @@ import {
     Button
 } from '@material-ui/core';
 
+const legend = {
+    OP: "Observations and practice",
+    BL: "Building-level score",
+    TSD: "Teacher-specific data",
+    LEA: "LEA Selected Measures",
+    PG: "Performance Goals"
+
+}
+
 const Header = (props) => <Box style={{textAlign: "center"}}><Typography variant="h3" style={{fontWeight: 1000, marginBottom: '100px'}}>{props.children}</Typography></Box>
+
 
 const colors = {
     aqua: "#00ffff",
@@ -314,6 +325,7 @@ const TeacherPie = (props) => {
 
 
     const [currentQ, setCurrentQ] = useState(QTemp)
+    const [hovered, setHovered] = useState(null);
 
     return (
         <>
@@ -340,6 +352,26 @@ const TeacherPie = (props) => {
                                 )
                             })
                             }
+                            {/* Legend */}
+                            <hr />
+                            <Box style={{textAlign: "center"}}><Typography variant="h4" style={{fontWeight: 1000, marginBottom: '30px'}}>Legend</Typography></Box>
+                            {
+                                pie.current.map(slice => {
+                                    return (
+                                        <>
+                                        <Grid container spacing={2}>
+                                            <Grid item xs={2}>
+                                                <div style={{backgroundColor: slice.color.rgb, width: '100%', height: '70%'}}></div>
+                                            </Grid>
+                                            <Grid item container xs={6} >
+                                            <Typography><sup><b>{slice.label} ({legend[slice.label]})</b></sup></Typography>
+                                            </Grid>
+                                        </Grid>
+                                        
+                                        </>
+                                    )
+                                })
+                            }
                         </Container>
                     </Grid>
                     <Grid item xs={7}>
@@ -348,6 +380,12 @@ const TeacherPie = (props) => {
                             data={
                                 pie.current.map(slice => ({ title: slice.label, value: slice.value, color: slice.color.rgb}))
                                 }
+                            onMouseOver={(_, index) => {
+                                setHovered(index);
+                                }}
+                                onMouseOut={() => {
+                                setHovered(null);
+                                }}
                             animate
                             animationDuration={1000}
                             label={({ dataEntry }) => `${Math.round(dataEntry.percentage)} % ${dataEntry.title}`}
@@ -356,6 +394,11 @@ const TeacherPie = (props) => {
                             labelPosition={112}
                             center={[15,15]}
                             viewBoxSize={[30,30]}    
+                        />
+                        <ReactTooltip
+                            getContent={() =>
+                            hovered ? pie.current[hovered].label : null
+                            }
                         />
                         </div>
                     </Grid>
