@@ -13,63 +13,17 @@ import {
 } from '@material-ui/core';
 
 const legend = {
-    OP: "Observations and practice",
-    BL: "Building-level score",
-    TSD: "Teacher-specific data",
-    "TSD (2 or 3 Measures)": "Teacher-specific data",
-    "TSD (1 Measure)": "Teacher-specific data",
-    LEA: "LEA Selected Measures",
-    PG: "Performance Goals"
+    OP: {full: "Observations and practice", color: "#66cccc"},
+    BL: {full: "Building-level score", color: "#ff6699"},
+    TSD: {full: "Teacher-specific data", color: "#9900ff"},
+    "TSD (2 or 3 Measures)": {full: "Teacher-specific data", color: "#da251c"},
+    "TSD (1 Measure)": {full: "Teacher-specific data", color: "#012e67"}, 
+    LEA: {full: "LEA Selected Measures", color: "#954f51"},
+    PG: {full: "Performance Goals", color: "#ff7518"}
 
 }
 
 const Header = (props) => <Box style={{textAlign: "center"}}><Typography variant="h3" style={{fontWeight: 1000, marginBottom: '100px'}}>{props.children}</Typography></Box>
-
-
-const colors = {
-    beige: "#f5f5dc",
-    black: "#000000",
-    blue: "#0000ff",
-    brown: "#a52a2a",
-    cyan: "#00ffff",
-    darkblue: "#00008b",
-    darkcyan: "#008b8b",
-    darkgrey: "#a9a9a9",
-    darkgreen: "#006400",
-    darkkhaki: "#bdb76b",
-    darkmagenta: "#8b008b",
-    darkolivegreen: "#556b2f",
-    darkorange: "#ff8c00",
-    darkorchid: "#9932cc",
-    darkred: "#8b0000",
-    darksalmon: "#e9967a",
-    darkviolet: "#9400d3",
-    fuchsia: "#ff00ff",
-    gold: "#ffd700",
-    green: "#008000",
-    indigo: "#4b0082",
-    khaki: "#f0e68c",
-    lime: "#00ff00",
-    magenta: "#ff00ff",
-    maroon: "#800000",
-    navy: "#000080",
-    olive: "#808000",
-    orange: "#ffa500",
-    pink: "#ffc0cb",
-    purple: "#800080",
-    violet: "#800080",
-    red: "#ff0000",
-    silver: "#c0c0c0",
-};
-
-const randomColor = () => {
-    var result;
-    var count = 0;
-    for (var prop in colors)
-        if (Math.random() < 1/++count)
-        result = prop;
-    return { name: result, rgb: colors[result]};
-    };
 
 const TeacherPie = (props) => {
 
@@ -91,14 +45,7 @@ const TeacherPie = (props) => {
 
             if (answer.slices !== undefined) {
                 const existingColors = pie.current.map(slice => slice.color)
-                const newPie = answer.slices.map(slice => {
-                    // get unique color for each slice
-                    let color = randomColor();
-                    while (existingColors.findIndex(c => c === color) !== -1) {
-                        color = randomColor()
-                    }
-                    return {value: slice.value, label: slice.label, color: color}
-                })
+                const newPie = answer.slices.map(slice => ({value: slice.value, label: slice.label, color: legend[slice.label].color}))
 
                 pie.current = pie.current.concat(newPie);
             }
@@ -353,10 +300,10 @@ const TeacherPie = (props) => {
                                         <>
                                         <Grid container spacing={2}>
                                             <Grid item xs={2}>
-                                                <div style={{backgroundColor: slice.color.rgb, width: '100%', height: '70%'}}></div>
+                                                <div style={{backgroundColor: slice.color, width: '100%', height: '70%'}}></div>
                                             </Grid>
                                             <Grid item container xs={6} >
-                                            <Typography><sup><b>{slice.label} ({legend[slice.label]})</b></sup></Typography>
+                                            <Typography><sup><b>{slice.label} ({legend[slice.label].full})</b></sup></Typography>
                                             </Grid>
                                         </Grid>
                                         
@@ -384,7 +331,7 @@ const TeacherPie = (props) => {
                     <div style={{backgroundColor:"white", height: "80vh", textAlign: "center"}}>
                         <PieChart
                             data={
-                                pie.current.map(slice => ({ title: slice.label, value: slice.value, color: slice.color.rgb}))
+                                pie.current.map(slice => ({ title: slice.label, value: slice.value, color: slice.color}))
                                 }
                             onMouseOver={(_, index) => {
                                 setHovered(index);
