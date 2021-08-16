@@ -125,8 +125,8 @@ const TeacherPie = (props) => {
             </FormControl>
             <Box style={{textAlign:"center", marginTop: '20px'}}>
                 <Button 
-                    variant="outlined" 
-                    style={{backgroundColor: "lightblue"}} 
+                    variant="contained" 
+                    color="primary"
                     size="large"
                     onClick={handleClick}
                 >
@@ -326,30 +326,27 @@ const TeacherPie = (props) => {
             {!done ?
             <>
                 <div style={{backgroundColor:"white", height: "100%", paddingTop: '30px', textAlign: "center"}}>
-                <Header>Build your pie chart</Header>
+                <Header>Build your evaluation pie chart</Header>
                 {currentQ}
                 </div>
             </>
             :
             <Box style={{backgroundColor: "white", height: "100%"}}>
-                <Box style={{textAlign: "center", backgroundColor: "white"}}><Typography variant="h3" style={{fontWeight: 1000, marginBottom: '30px'}}>Your Evaluation Pie Chart</Typography></Box>
+
+                {/* Header */}
+                <Box style={{textAlign: "center", backgroundColor: "white"}}>
+                    <Typography variant="h3" style={{fontWeight: 1000, marginBottom: '10px'}}>Your Evaluation Pie Chart</Typography>
+                    <Typography style={{marginBottom: '10px'}}>Need to change your answers?</Typography>
+                    <Button onClick={() => window.location.reload(false)} variant="contained" color="primary"><b>Restart</b></Button>
+                </Box>
+                
+                {/* Content */}
                 <Grid container>
                     <Grid item xs={5} style={{backgroundColor: "white", float: "left", borderRight: "2px solid #333"}}>
-                        <Container style={{paddingTop: '20px'}}>
-                            <Box style={{textAlign: "center"}}><Typography variant="h3" style={{fontWeight: 1000, marginBottom: '30px'}}>Your Answers</Typography></Box>
-                            {
-                                answers.current.map(answer => {
-                                return (
-                                    <>
-                                    <Typography variant="h5">{answer.question}</Typography>
-                                    <Typography variant="body1" style={{marginBottom: '15px'}}>{answer.answer.value}</Typography>
-                                    </>
-                                )
-                            })
-                            }
-                            {/* Legend */}
-                            <hr />
-                            <Box style={{textAlign: "center"}}><Typography variant="h4" style={{fontWeight: 1000, marginBottom: '30px'}}>Legend</Typography></Box>
+                        <Container>            
+
+                        {/* Legend */}
+                        <Box style={{textAlign: "center"}}><Typography variant="h3" style={{fontWeight: 1000, marginBottom: '30px'}}>Legend</Typography></Box>
                             {
                                 pie.current.map(slice => {
                                     return (
@@ -367,6 +364,20 @@ const TeacherPie = (props) => {
                                     )
                                 })
                             }
+                            <hr />
+
+                            {/* Answers */}
+                            <Box style={{textAlign: "center"}}><Typography variant="h3" style={{fontWeight: 1000, marginBottom: '30px'}}>Your Answers</Typography></Box>
+                            {
+                                answers.current.map(answer => {
+                                return (
+                                    <>
+                                    <Typography variant="h5">{answer.question}</Typography>
+                                    <Typography variant="body1" style={{marginBottom: '15px'}}>{answer.answer.value}</Typography>
+                                    </>
+                                )
+                            })
+                            }  
                         </Container>
                     </Grid>
                     <Grid item xs={7}>
