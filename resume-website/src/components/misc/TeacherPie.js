@@ -108,7 +108,7 @@ const TeacherPie = (props) => {
                 </MenuItem>
             ]}
         >
-        Do you have IEP Goals?
+        Do you have n >= 11 students with similar IEP goals?
         </Question>
 
 
@@ -134,7 +134,7 @@ const TeacherPie = (props) => {
                 </MenuItem>
             ]}
         >
-        Do you have IEP Goals?
+        Do you have n >= 11 students with similar IEP goals?
         </Question>
 
 
@@ -270,7 +270,7 @@ const TeacherPie = (props) => {
                             {/* Answers */}
                             <Box style={{textAlign: "center"}}><Typography variant="h3" style={{fontWeight: 1000, marginBottom: '30px'}}>Your Answers</Typography></Box>
                             {
-                                answers.current.map(answer => {
+                                answers.current.reverse().map(answer => {
                                 return (
                                     <>
                                     <Typography variant="h5">{answer.question}</Typography>
