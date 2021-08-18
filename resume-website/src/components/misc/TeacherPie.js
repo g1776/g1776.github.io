@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import { PieChart } from 'react-minimal-pie-chart';
 import ReactTooltip from 'react-tooltip';
 import {
@@ -34,28 +34,43 @@ const TeacherPie = (props) => {
 
     const Question = (props) => {
         const [answer, setAnswer] = useState()
+        const [showError, setShowError] = useState(false)
 
         const handleChange = (newAnswer) => {
+            if (newAnswer !== undefined) {
+                setShowError(false)
+            }
             setAnswer(newAnswer)
         }
 
         const handleClick = () => {
-            // update list of answers
-            answers.current = [{question: props.children, answer: answer},...answers.current]
+            console.log(answer)
 
-            if (answer.slices !== undefined) {
-                const existingColors = pie.current.map(slice => slice.color)
-                const newPie = answer.slices.map(slice => ({value: slice.value, label: slice.label, color: legend[slice.label].color}))
-
-                pie.current = pie.current.concat(newPie);
-            }
-            if (answer.question === undefined){
-                console.log("Now time to display your pie...");
-                console.log(pie.current)
-                setDone(true)
+            if (answer === undefined) {
+                console.log("You must choose an answer!")
+                setShowError(true)
             } else {
-                props.onClick(answer.question);
+                // update list of answers
+                answers.current = [{question: props.children, answer: answer},...answers.current]
+
+                if (answer.slices !== undefined) {
+                    // update pie
+                    const newPie = answer.slices.map(slice => ({value: slice.value, label: slice.label, color: legend[slice.label].color}))
+                    pie.current = pie.current.concat(newPie);
+                }
+                if (answer.question === undefined){
+                    // No more questions to ask
+                    console.log("Now time to display your pie...");
+                    console.log(pie.current)
+                    setDone(true)
+                } else {
+                    // next question
+                    const oldAnswer = answer;
+                    setAnswer(undefined) // fixes bug where answer is not undefined in next question
+                    props.onClick(oldAnswer.question);
+                }
             }
+            
         }
         
 
@@ -69,6 +84,7 @@ const TeacherPie = (props) => {
                 >
                 {props.options.map(o => o)}
                 </Select>
+                {showError && <Box style={{textAlign: "right"}}><Typography variant="body1" color="error"><i>Please select an option!</i></Typography></Box>}
             </FormControl>
             <Box style={{textAlign:"center", marginTop: '20px'}}>
                 <Button 
