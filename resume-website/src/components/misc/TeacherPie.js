@@ -76,6 +76,7 @@ const TeacherPie = (props) => {
 
         return (
             <>
+            <Box style={{marginBottom: '50px'}}>
             <Typography variant="h4" style={{marginBottom: '20px'}}>{props.children}</Typography>
             <FormControl style={{width: "50%"}}>
                 <Select
@@ -86,7 +87,7 @@ const TeacherPie = (props) => {
                 </Select>
                 {showError && <Box style={{textAlign: "right"}}><Typography variant="body1" color="error"><i>Please select an option!</i></Typography></Box>}
             </FormControl>
-            <Box style={{textAlign:"center", marginTop: '20px'}}>
+            <Box style={{textAlign:"center", marginTop: '20px', marginBottom: '20px'}}>
                 <Button 
                     variant="contained" 
                     color="primary"
@@ -96,6 +97,18 @@ const TeacherPie = (props) => {
                     Next
                 </Button>
             </Box>
+
+            {props.definitions &&
+
+            <Box style={{textAlign: "left", paddingLeft: '200px', paddingRight: '200px'}}>
+                <Typography variant="h6" style={{marginBottom: '10px'}}><b>Definitions</b></Typography>
+                <Typography variant="body1">
+                    {props.definitions}
+                </Typography>
+            </Box>
+            }
+            </Box>
+            
             </>
         )
     }
@@ -105,6 +118,12 @@ const TeacherPie = (props) => {
 
     const QDataAvailableTeacherIEP = <Question
             onClick={q => setCurrentQ(q)}
+            definitions={
+                <>
+                <p>The supervising administrator and the classroom teacher should work cooperatively to identify IEP goals to which the educator contributes data for monitoring the progress of students with similar academic or non-academic IEP goal skill areas.</p>
+                <p>An LEA may establish a minimum number (an n count) for students with associated IEP Goals, below which the classroom teacher shall not be evaluated on IEP Goals Progress. The n count shall not exceed n=11.</p>
+                </>
+            }
             options={[
                 <MenuItem value={{
                     value: "Yes",
@@ -130,6 +149,12 @@ const TeacherPie = (props) => {
 
     const QTeacherOtherIEP = <Question
             onClick={q => setCurrentQ(q)}
+            definitions={
+                <>
+                <p>The supervising administrator and the classroom teacher should work cooperatively to identify IEP goals to which the educator contributes data for monitoring the progress of students with similar academic or non-academic IEP goal skill areas.</p>
+                <p>An LEA may establish a minimum number (an n count) for students with associated IEP Goals, below which the classroom teacher shall not be evaluated on IEP Goals Progress. The n count shall not exceed n=11.</p>
+                </>
+            }
             options={[
                 <MenuItem value={{
                     value: "Yes",
@@ -156,6 +181,14 @@ const TeacherPie = (props) => {
 
     const QClassroomTeacherData = <Question
             onClick={q => setCurrentQ(q)}
+            definitions={
+                <>
+                <div><b>Data Available Teachers</b></div>
+                <p>A classroom teacher who is a professional employee teaching English, language arts, mathematics, science, or other content areas as assessed by PSSA and/or Keystone Exams).</p> 
+                <div><b>Non-Data Available Teachers</b></div>
+                <p>A classroom teacher teaching in a content area not assessed by an assessment.</p>
+                </>
+            }
             options={[
                 <MenuItem value={{
                     value: "Data-Available Teacher",
@@ -186,6 +219,16 @@ const TeacherPie = (props) => {
 
     const QRole = <Question
             onClick={q => setCurrentQ(q)}
+            definitions={
+                <>
+                <div><b>Classroom Teacher</b></div>
+                <p>A professional or temporary professional employee who provides direct instruction to students related to a specific subject or grade level. </p>
+                <div><b>Non-Teaching Professional</b></div>
+                <p>An educational specialist or a professional employee or temporary professional employee who provides services and who is not a classroom teacher. (e.g., counselor, nurse, instructional coach).</p>
+                <div><b>Principal</b></div>
+                <p>Includes a building principal, an assistant principal, a vice principal, a supervisor of special education, or a director of career and technical education.</p>
+                </>
+            }
             options={[
                 <MenuItem value={{
                     value: "Non-teaching Professional", 
@@ -214,6 +257,12 @@ const TeacherPie = (props) => {
 
     const QTemp = <Question
             onClick={q => setCurrentQ(q)}
+            definitions={
+                <>
+                <div><b>Temporary Professional Employee</b></div>
+                <p>Any individual who has been employed to perform for a limited time the duties of a newly created position or of a regular professional employee whose service has been terminated by death, resignation, suspension, or removal.</p>
+                </>
+            }
             options={[
                 <MenuItem value={{
                     value: "Yes",
