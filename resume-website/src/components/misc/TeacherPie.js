@@ -161,15 +161,6 @@ const TeacherPie = (props) => {
                     ]
                 }}>
                     Non-Data-Available Teacher
-                </MenuItem>,
-                <MenuItem value={{
-                    value: "Teacher Without Building-level Data",
-                    question: QTeacherOtherIEP,
-                    slices: [
-                        {value: 80, label: "OP"}
-                    ]
-                }}>
-                    Teacher Without Building-level Data
                 </MenuItem>
             ]}
         >
@@ -177,66 +168,29 @@ const TeacherPie = (props) => {
         </Question>
 
 
-    const QPrincipalData = <Question
+    const QRole = <Question
             onClick={q => setCurrentQ(q)}
             options={[
                 <MenuItem value={{
-                    value: "Principal With Building-level data",
+                    value: "Non-teaching Professional", 
+                    slices: [
+                        {value: 90, label: "OP"},
+                        {value: 10, label: "BL"}
+                            ]
+                    }}>
+                Non-teaching Professional
+                </MenuItem>,
+                <MenuItem value={{value: "Classroom Teacher", question: QClassroomTeacherData}}>Classroom Teacher</MenuItem>,
+                <MenuItem value={{
+                    value: "Principal", 
                     slices: [
                         {value: 70, label: "OP"},
                         {value: 20, label: "PG"},
                         {value: 10, label: "BL"}
-                    ]
-                }}>
-                    Principal With Building-level data
-                </MenuItem>,
-                <MenuItem value={{
-                    value: "Principal Without Building-level data",
-                    slices: [
-                        {value: 80, label: "OP"},
-                        {value: 20, label: "PG"}
-                    ]
-                }}>
-                    Principal Without Building-level data
-                </MenuItem>,
-            ]}
-        >
-            What level of data do you have?
-        </Question>
-
-
-    const QNonTeachingData = <Question
-            onClick={q => setCurrentQ(q)}
-            options={[
-                <MenuItem value={{
-                    value: "Non-teaching Professional With Building-level data",
-                    slices: [
-                        {value: 90, label: "OP"},
-                        {value: 10, label: "BL"}
-                    ]
-                }}>
-                    Non-teaching Professional With Building-level data
-                </MenuItem>,
-                <MenuItem value={{
-                    value: "Non-teaching Professional Without Building-level data",
-                    slices: [
-                        {value: 100, label: "OP"},
-                    ]
-                }}>
-                    Non-teaching Professional Without Building-level data
+                            ]
+                    }}>
+                        Principal
                 </MenuItem>
-            ]}
-            >
-            What level of data do you have?
-            </Question>
-
-
-    const QRole = <Question
-            onClick={q => setCurrentQ(q)}
-            options={[
-                <MenuItem value={{value: "Non-teaching Professional", question: QNonTeachingData}}>Non-teaching Professional</MenuItem>,
-                <MenuItem value={{value: "Classroom Teacher", question: QClassroomTeacherData}}>Classroom Teacher</MenuItem>,
-                <MenuItem value={{value: "Principal", question: QPrincipalData}}>Principal</MenuItem>
             ]}
             >What is your role?
         </Question>
