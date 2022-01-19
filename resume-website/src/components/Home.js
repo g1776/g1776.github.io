@@ -14,6 +14,7 @@ function Home() {
     <main className={classes.root}>
       <Tilt 
       style={{width: "75vw", margin: "auto"}}
+      options={{max: 0}}
       >
         <Paper className={classes.card}>
           <Grid container>
@@ -40,7 +41,7 @@ function Home() {
 
             </Grid>
             <Grid item xs={12} lg={4} container style={{justifyContent: "center", alignItems: "center"}}>
-              <img src={process.env.PUBLIC_URL + '/meTransparent.png'} style={{width: "70%", height: "auto"}}></img>
+              <img src={process.env.PUBLIC_URL + '/me2.jpg'} style={{width: "60%", height: "auto"}} alt="Gregory Glatzer" />
             </Grid>
           </Grid>
         </Paper>

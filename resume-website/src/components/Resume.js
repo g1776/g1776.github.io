@@ -181,7 +181,7 @@ function Resume() {
                 image="Range Cluster Hotspots.png"
                 imgWidth="80%"
                 bullets={[
-                    "First author on the research paper “An Analysis of Elephants’ Movement Data in Sub-Saharan Africa Using Clustering”",
+                    <span>First author on the research paper “An Analysis of Elephants’ Movement Data in Sub-Saharan Africa Using Clustering” which was presented at the <Link href="https://tawiri.or.tz/conference-2/" target="blank_">Tanzania Wildlife Research Institute (TAWIRI) 13th Scientific Conference</Link></span>,
                     "Applied DBSCAN clustering to elephant data and used centroids to predict locations of interest for elephants.",
                     "Conducted a literature review of anti-poaching technologies.",
                     "Demonstrated initiative and the ability to create self-driven work."
