@@ -3,17 +3,17 @@ import { makeStyles } from "@material-ui/styles";
 import { Grid, Typography, Container } from "@material-ui/core";
 
 import Project from "./project";
+import Header from "../Header";
 
 const Projects = () => {
   const classes = useStyles();
 
   return (
     <Container className={classes.root}>
-      <div className={classes.header}>
-        <Typography variant="h2">Projects</Typography>
-      </div>
 
-      <Grid container>
+      <Header>Projects</Header>
+
+      <Grid container className={classes.content}> 
         <Project
           title="OpenVessel"
           subtitle="Startup and 2nd place winner in the Nittany Ai Challenge 2020"
@@ -245,10 +245,8 @@ const useStyles = makeStyles((theme) => ({
   root: {
     width: "80%",
   },
-  header: {
-    textAlign: "center",
+  content: {
     marginTop: theme.spacing(5),
-    marginBottom: theme.spacing(5),
   }
 }));
 

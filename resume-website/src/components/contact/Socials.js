@@ -5,13 +5,11 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 
 import theme from "../../theme";
 
-const ContactThumb = ({ link, label, Icon, lg = 4 }) => (
+const SocialThumb = ({ link, label, Icon}) => (
     <Grid
       item
-      container
       xs={12}
-      lg={lg}
-      style={{ justifyContent: "center", alignItems: "center" }}
+      style={{ alignItems: "center" }}
     >
       <Link href={link}>
         <Icon
@@ -22,38 +20,34 @@ const ContactThumb = ({ link, label, Icon, lg = 4 }) => (
             position: "relative",
           }}
         />
-        <Typography variant="body1" style={{ display: "inline" }}>
+        <Typography variant="h5" style={{ display: "inline" }}>
           {label}
         </Typography>
       </Link>
     </Grid>
   );
 
-const Contact = () => {
+const Socials = () => {
     return (
-      <Grid container style={{ 
-        justifyContent: "center", 
-        alignItems: "center",
-        marginTop: theme.spacing(4),
-        marginBottom: theme.spacing(7),
-         }}>
-        <ContactThumb
+      <Grid container spacing={2}>
+        <SocialThumb
           link="https://github.com/g1776"
           label="github.com/g1776"
           Icon={GitHubIcon}
         />
-        <ContactThumb
+        <SocialThumb
           link="mailto:gregoryg323@gmail.com"
           label="gregoryg323@gmail.com"
           Icon={EmailIcon}
         />
-        <ContactThumb
+        <SocialThumb
           link="https://www.linkedin.com/in/gregory-glatzer"
           label="linkedin.com/in/gregory-glatzer"
           Icon={LinkedInIcon}
         />
+        
       </Grid>
     );
   };
 
-export default Contact;
+export default Socials;

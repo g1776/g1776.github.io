@@ -17,6 +17,7 @@ import Home from './components/Home';
 import Resume from './components/resume';
 import MiscSwitch from './components/misc';
 import Projects from './components/projects'
+import Contact from './components/contact';
 
 
 ReactDOM.render(
@@ -33,6 +34,7 @@ ReactDOM.render(
           <Route path="/resume" component={Resume} />
           <Route path="/projects" component={Projects} />
           <Route path="/misc/:page" component={MiscSwitch} />
+          <Route path="/contact" component={Contact} />
           <Redirect to="/" />
         </Switch>
       </div>

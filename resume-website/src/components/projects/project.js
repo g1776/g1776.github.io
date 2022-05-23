@@ -15,7 +15,7 @@ const Project = (props) => {
   const theme = useTheme();
 
   return (
-    <React.Fragment>
+    <>
       <Grid item container className={classes.project}>
         <Grid item container xs={12} md={image === undefined ? 12 : 8}>
           <Grid item xs={12}>
@@ -49,7 +49,7 @@ const Project = (props) => {
           <Typography variant="h6">{props.children}</Typography>
         </Grid>
       </Grid>
-    </React.Fragment>
+    </>
   );
 };
 

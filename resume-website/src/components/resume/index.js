@@ -5,9 +5,9 @@ import { makeStyles } from "@material-ui/core/styles";
 
 // import parts of the resume
 import Blobs from "./Blob";
-import Contact from "./Contact";
 import Experience from "./Experience";
 import Section from './Section';
+import Header from "../Header";
 
 function Resume() {
   const classes = useStyles();
@@ -19,19 +19,16 @@ function Resume() {
 
       <div className={classes.root} maxWidth="md">
 
-        <div className={classes.header}>
-            <Typography variant="h2"> Resume/CV </Typography>
-            <Button 
-              variant="contained" 
-              className={classes.btn} 
-              size="large"
-              onClick={() =>  window.open(process.env.PUBLIC_URL + '/resume.pdf', "_blank")}
-              >
-                Download resume as a PDF
-            </Button>
-
-            <Contact />
-            
+        <Header>Resume/CV</Header>
+        <div style={{textAlign: "center"}}>
+        <Button 
+          variant="contained" 
+          className={classes.btn} 
+          size="large"
+          onClick={() =>  window.open(process.env.PUBLIC_URL + '/resume.pdf', "_blank")}
+          >
+            Download resume as a PDF
+        </Button>
         </div>
 
         <Section header="Summary">
@@ -225,21 +222,19 @@ const useStyles = makeStyles((theme) => ({
     width: "80%",
     backgroundColor: "transparent",
     position: "absolute",
-    top: "60%",
+    top: "63%",
     left: "50%",
     transform: "translate(-50%, -50%)",
-  },
-  header: {
-    textAlign: "center",
-    marginTop: theme.spacing(5),
   },
   btn: {
     backgroundColor: theme.palette.primary.main,
     color: theme.palette.common.white,
+    marginTop: theme.spacing(1),
+    marginBottom: theme.spacing(3),
     "&:hover": {
       backgroundColor: theme.palette.primary.dark,
     },
-    marginTop: theme.spacing(3),
+    
   },
   skills: {
     margin: 0,
