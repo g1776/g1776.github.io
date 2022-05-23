@@ -9,9 +9,6 @@ import Contact from "./Contact";
 import Experience from "./Experience";
 import Section from './Section';
 
-import FancyHr from "../FancyHr";
-
-
 function Resume() {
   const classes = useStyles();
 
@@ -36,8 +33,6 @@ function Resume() {
             <Contact />
             
         </div>
-
-        {/* <FancyHr/> */}
 
         <Section header="Summary">
           Incoming senior pursuing a Bachelor of Science in Applied Data Science with a

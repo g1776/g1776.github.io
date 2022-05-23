@@ -4,8 +4,6 @@ import { Grid, Typography, Container } from "@material-ui/core";
 
 import Project from "./project";
 
-import FancyHr from "../FancyHr";
-
 const Projects = () => {
   const classes = useStyles();
 
@@ -13,7 +11,6 @@ const Projects = () => {
     <Container className={classes.root}>
       <div className={classes.header}>
         <Typography variant="h2">Projects</Typography>
-        {/* <FancyHr/> */}
       </div>
 
       <Grid container>
