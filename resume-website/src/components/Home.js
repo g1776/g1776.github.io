@@ -56,7 +56,6 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(5),
     display: "flex",
     height: "100%",
-    backgroundColor: theme.palette.common.black
   },
   introParagraph: {
     marginBottom: "1.2em",
@@ -70,8 +69,6 @@ const useStyles = makeStyles((theme) => ({
   card: {
     margin: "auto",
     padding: theme.spacing(3),
-    backgroundColor: "#153040",
-    color: "white"
   }
 }));
 

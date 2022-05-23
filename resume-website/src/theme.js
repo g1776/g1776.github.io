@@ -5,7 +5,8 @@ import { createMuiTheme } from '@material-ui/core/styles';
 let theme = createMuiTheme({
 palette: {
     common: {
-        black: "rgb(35,31,32)"
+        black: "rgb(35,31,32)",
+        white: "whitesmoke"
     },
     primary: {
     main: '#556cd6',
@@ -17,7 +18,7 @@ palette: {
     main: red.A400,
     },
     background: {
-    default: '#fff',
+    default: "whitesmoke",
     },
 },
 typography: {

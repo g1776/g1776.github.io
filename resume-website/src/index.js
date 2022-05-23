@@ -13,11 +13,10 @@ import NavProvider from './components/NavProvider';
 
 import './style.css'
 
-import Nav from './components/Nav';
 import Home from './components/Home';
-import Resume from './components/Resume';
+import Resume from './components/resume';
 import MiscSwitch from './components/misc';
-import Projects from './components/Projects'
+import Projects from './components/projects'
 
 
 ReactDOM.render(
@@ -30,6 +29,7 @@ ReactDOM.render(
       <div style={{flex: "1 1 auto"}}>
         <Switch>
           <Route exact path="/" component={Home} />
+          <Route path="/cv" component={Resume} />
           <Route path="/resume" component={Resume} />
           <Route path="/projects" component={Projects} />
           <Route path="/misc/:page" component={MiscSwitch} />

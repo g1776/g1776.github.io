@@ -1,9 +1,14 @@
+:root {
+    --theme-black: rgb(35,31,32);
+    --theme-white: whitesmoke;
+}
+
 body, html, #root {
     margin: 0;
     padding: 0;
     height: 100%;
     overflow-x: hidden;
-    background-color: rgb(35,31,32);
+    background-color: var(--theme-white);
 }
 
 ul {
@@ -19,14 +24,14 @@ ul>li:before{
 
 .nav-link{
     display: block;
-    color: white;
+    color: var(--theme-black);
     text-decoration: none;
     position: relative;
 }
 
 .nav-link::after{
     content: "";
-    background: white;
+    background: var(--theme-black);
     mix-blend-mode: exclusion;
     width: calc(100% + 20px);
     height: 0;
@@ -37,11 +42,11 @@ ul>li:before{
 }
 
 .nav-link:hover::after{
-    height: calc(100% + 8px)
+    height: calc(100% + 8px);
 }
 
 a.regularLink{
-    color: lightblue
+    color: #0047AB;
 }
 
 a.regularLink:visited{

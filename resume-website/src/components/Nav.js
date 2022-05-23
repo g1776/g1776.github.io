@@ -23,7 +23,7 @@ function Nav() {
     <nav>
         <Grid container style={{justifyContent: "center", alignItems: "center", padding: 20}} spacing={5}>
             <Section to="/">About</Section>
-            <Section to="/resume">Resume</Section>
+            <Section to="/resume">Resume/CV</Section>
             <Section to="/projects">Projects</Section>
         </Grid>
         {/* <ul>
