@@ -11,8 +11,8 @@ function Nav() {
 
     const Section = (props) => {
         return (
-            <Grid item xs={"auto"} className={classes.linkContainer}> 
-                <Link to={props.to} className="nav-link">
+            <Grid item xs={"auto"}> 
+                <Link to={props.to} className="nav-text nav-link">
                     <Typography component="h3" variant="h5">{props.children}</Typography>
                 </Link>
             </Grid>
@@ -21,23 +21,32 @@ function Nav() {
 
     return (
     <nav>
-        <Grid container style={{justifyContent: "center", alignItems: "center", padding: 20}} spacing={5}>
-            <Section to="/">About</Section>
-            <Section to="/resume">Resume/CV</Section>
-            <Section to="/projects">Projects</Section>
+        <Grid container className={classes.navContainer}>
+            <Grid item xs={12} md={5} >
+                <Link to={"/"} className="nav-text">
+                    <Typography component="h1" variant="h5" className="nav-text logo-text">Gregory Glatzer</Typography>
+                </Link>
+                
+            </Grid>
+            <Grid item container xs={12} md={7} spacing={5} className={classes.navLinksContainer}>
+                <Section to="/">About</Section>
+                <Section to="/projects">Projects</Section>
+                <Section to="/resume">Resume/CV</Section>
+                
+            </Grid>
         </Grid>
-        {/* <ul>
-        
-            <li><Link to="/resume">Resume</Link></li>
-            <li><Link to="/about">About</Link></li>
-        </ul> */}
     </nav>
     );
 }
 
 const useStyles = makeStyles((theme) => ({
-    linkContainer: {
-        textAlign: "center",
+    navContainer: {
+        justifyContent: "space-between",
+        alignItems: "center",
+        padding: 20
+    },
+    navLinksContainer: {
+        justifyContent: 'end'
     }
 }));
 

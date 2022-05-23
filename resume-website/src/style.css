@@ -22,7 +22,12 @@ ul>li:before{
     margin-left: -1em;
 }
 
-.nav-link{
+.logo-text {
+    color:  #F28C28 !important;
+    font-weight: bolder;
+}
+
+.nav-text{
     display: block;
     color: var(--theme-black);
     text-decoration: none;

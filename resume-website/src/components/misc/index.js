@@ -16,7 +16,7 @@ const MiscSwitch = (props) => {
             return <TeacherPie/>
     
         default:
-            return <div>lol no webpage here</div>
+            return <div>No webpage here!</div>
     }
 
 }
