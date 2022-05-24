@@ -7,7 +7,8 @@ import {
 } from "@material-ui/core";
 import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
 
-import PortfolioCard from "./PortfolioCard";
+import FeaturedProjects from "./FeaturedProjects";
+import InTheNews from "./InTheNews";
 
 const Home = () => {
   const classes = useStyles();
@@ -44,31 +45,8 @@ const Home = () => {
       </Grid>
 
       <div id="portfolio" className={classes.portfolio}>
-        <Typography component="h2" variant="h4">
-          Featured Projects
-        </Typography>
-        <Grid container spacing={3}>
-            <Grid item xs={12} md={6}>
-            <PortfolioCard
-            title="Elephant movement research with IST Faculty"
-            description="Working with IST Faculty at Penn State, 
-            I conducted research on the movement of elephants in sub-saharan Africa, including what environmental and spatial factors affects their movement. 
-            Using DBSCAN and KMeans clustering algorithms, I developed a pipeline that yields potential &quot;locations of interest&quot; for elephants. 
-            This research led to the publication of my research paper, &quot;An Analysis of Elephants' Movement Data in Sub-Saharan Africa Using Clustering&quot; in the TAWIRI Conference in Arusha, Tanzania."
-            image={process.env.PUBLIC_URL + "/Range Cluster Hotspots.png"}
-            link={"/projects#openvessel"}
-            />
-            </Grid>
-            <Grid item xs={12} md={6}>
-                
-            </Grid>
-            <Grid item xs={12} md={6}>
-                
-            </Grid>
-            <Grid item xs={12} md={6}>
-                
-            </Grid>
-        </Grid>
+        <FeaturedProjects/>
+        <InTheNews/>
       </div>
     </Container>
   );

@@ -5,15 +5,135 @@ import { Grid, Typography, Container } from "@material-ui/core";
 import Project from "./project";
 import Header from "../Header";
 
+const ProjectLink = (props) => {
+  return (
+    <span>
+      &nbsp;
+      <a href={props.to} target="_blank" className="regularLink">
+        {props.children}
+      </a>
+      &nbsp;
+    </span>
+  );
+};
+
 const Projects = () => {
   const classes = useStyles();
 
   return (
     <Container className={classes.root}>
-
       <Header>Projects</Header>
 
-      <Grid container className={classes.content}> 
+      <Grid container className={classes.content}>
+        <Project
+          title="Elephant Movement Research with IST Faculty"
+          subtitle="Applying clustering to spatial data to find locations of interest for elephants"
+          image="Range Cluster Hotspots.png"
+          imgWidth={"80%"}
+          id="elephant-movement-research"
+        >
+          <p>
+            Working with IST Faculty at Penn State, I conducted research on the
+            movement of elephants in sub-saharan Africa, including what
+            environmental and spatial factors affects their movement. Using
+            DBSCAN and KMeans clustering algorithms, I developed a pipeline that
+            yields potential "locations of interest" for elephants. This
+            research led to the publication of my research paper,
+            <ProjectLink to="https://www.researchgate.net/publication/336907924_An_Analysis_of_Elephants_Movement_Data_in_Sub-Saharan_Africa_Using_Clustering">
+              "An Analysis of Elephants' Movement Data in Sub-Saharan Africa
+              Using Clustering"
+            </ProjectLink>
+            in the
+            <ProjectLink to="https://tawiri.or.tz/conference-2/">
+              Tanzania Wildlife Research Institute (TAWIRI) 13th Scientific
+              Conference
+            </ProjectLink>
+            in Arusha, Tanzania. In November 2021, I presented my work at the
+            conference virtually.
+          </p>
+
+          <p>
+            Since then, I have gotten the opportunity to continue elephant
+            movement research beyond Penn State with researchers out of
+            <ProjectLink to="https://tawiri.or.tz/conference-2/">
+              The Nelson Mandela Institute of Science and Technology (NM-IST)
+            </ProjectLink>
+            and the
+            <ProjectLink to="https://www.elephanttrust.org/">
+              Amboseli Trust for Elephants.
+            </ProjectLink>
+          </p>
+
+          <p>
+            While working through this project, I have learned how to manage my
+            time and outline my research goals. Each week I presented my work in
+            research group meetings, which has exposed me to how AI/ML research
+            is done, and how people ensure continued progress in self-driven
+            work.
+          </p>
+
+          <p>
+            As my paper gained exposure, I have been reached out by several
+            people regarding my work. Notably, I was contacted by the popular
+            data science podcast, Data Skeptic, who interviewed me for their
+            series about clustering! You can listen to their podcast episodes
+            <ProjectLink to="https://dataskeptic.com/blog/episodes/2022/tracking-elephant-clusters">
+              here.
+            </ProjectLink>
+          </p>
+
+          <p>
+            You can view the research paper
+            <ProjectLink to="https://www.researchgate.net/publication/355941394_An_Analysis_of_Elephants'_Movement_Data_in_Sub-Saharan_Africa_Using_Clustering/">
+              here.
+            </ProjectLink>
+          </p>
+        </Project>
+
+        <Project
+          title="The Mental Health Project"
+          subtitle="Frontend Developer - UI/UX"
+          image="TMHP.jfif"
+          imgWidth="50%"
+          id="the-mental-health-project"
+        >
+          <p>
+            In this project, I worked on building a Clinical Decision Support (CDS) tool to aid mental health
+            profesionals in the intake process. Using machine learning processes
+            hosted on Azure, we processed hand-written forms and displaying
+            the summarized results in custom-built dashboard. My main role
+            throughout this project has been developing the frontend, using
+            React.js with Material UI.
+          </p>
+          <p>
+            Throughout this project I have learned a lot. My UI skills have
+            greatly improved as I try to understand the vision of my teammates
+            and bring the product to life. We have adhered to a strict theming
+            and styling philosophy, which needs to reflected in my work. I have
+            been consulted by several UI experts, and have taken their feedback
+            and adjusted the product accordingly.
+          </p>
+          <p>
+            In addition to UI skills, I have also learned how to implement an
+            API to fetch and updated data from the backend. This was a new
+            structure to a project that I had not done before, and I needed to
+            be open to learning a new way of building a prototype. Finally, I
+            got exposure to the world of mental health, and the unique issues
+            and poain points experienced by professionals in the field that can
+            be addressed with technology solutions. Some skills I learned
+            throughout this experience have been:
+          </p>
+          <ul>
+            <li>Iterative design of UI interfaces</li>
+            <li>Working with an in-house API</li>
+            <li>Adapting to feedback from UI professionals</li>
+            <li>Working with the Material UI CSS framework</li>
+          </ul>
+          <p>
+            This project was part of the 2021 Nittany AI Challenge.
+          </p>
+        </Project>
+
         <Project
           title="OpenVessel"
           subtitle="Startup and 2nd place winner in the Nittany Ai Challenge 2020"
@@ -61,49 +181,7 @@ const Projects = () => {
           </ul>
         </Project>
 
-        <Project
-          title="The Mental Health Project"
-          subtitle="Frontend Developer - UI/UX"
-          image="TMHP.jfif"
-          imgWidth="50%"
-          noAccent
-        >
-          <p>
-            This project is a team for the 2021 Nittany AI Challenge. We are
-            building a Clinical Decision Support (CDS) tool to aid mental health
-            profesionals in the intake process. Using machine learning processes
-            hosted on Azure, we are processing hand-written forms and displaying
-            the summarized results in custom-built dashboard. My main role
-            throughout this project has been developing the frontend, using
-            React.js with Material UI. It has been an exciting project so far,
-            and we are currently working towards the final MVP of the
-            competition, with the final pitch in September.
-          </p>
-          <p>
-            Throughout this project I have learned a lot. My UI skills have
-            greatly improved as I try to understand the vision of my teammates
-            and bring the product to life. We have adhered to a strict theming
-            and styling philosophy, which needs to reflected in my work. I have
-            been consulted by several UI experts, and have taken their feedback
-            and adjusted the product accordingly.
-          </p>
-          <p>
-            In addition to UI skills, I have also learned how to implement an
-            API to fetch and updated data from the backend. This was a new
-            structure to a project that I had not done before, and I needed to
-            be open to learning a new way of building a prototype. Finally, I
-            got exposure to the world of mental health, and the unique issues
-            and poain points experienced by professionals in the field that can
-            be addressed with technology solutions. Some skills I learned
-            throughout this experience have been:
-          </p>
-          <ul>
-            <li>Iterative design of UI interfaces</li>
-            <li>Working with an in-house API</li>
-            <li>Adapting to feedback from UI professionals</li>
-            <li>Working with the Material UI CSS framework</li>
-          </ul>
-        </Project>
+    
 
         <Project
           title="EY-mentored project"
@@ -157,14 +235,10 @@ const Projects = () => {
             me. Once I had the model built, I was able to train it against
             itself, me, or other models in order to judge (and graph!) its
             performance. The process of creating the game is documented in a
-            Medium post of mine, which you can read{" "}
-            <a
-              className="regularLink"
-              href="https://medium.com/@gregoryg323/building-the-classic-othello-board-game-for-ai-8a42ba2d7f13"
-              target="_blank"
-            >
-              here
-            </a>
+            Medium post of mine, which you can reached
+            <ProjectLink to="https://medium.com/@gregoryg323/building-the-classic-othello-board-game-for-ai-8a42ba2d7f13">
+            here
+            </ProjectLink>
             .
           </p>
           <p>
@@ -212,28 +286,16 @@ const Projects = () => {
             dataframe manipulating with tidyverse tools. This was my final
             project submission for STAT 184: Introduction to R at Penn State. An
             precursor to this final report was EDA of the data sources which can
-            be found{" "}
-            <a
-              className="regularLink"
-              href={process.env.PUBLIC_URL + "STAT 184 Final Project EDA.html"}
-              target="_blank"
-            >
+            be found
+            <ProjectLink to={process.env.PUBLIC_URL + "STAT 184 Final Project EDA.html"}>
               here
-            </a>
-            .
+            </ProjectLink>
           </p>
           <p>
             The final report can be found{" "}
-            <a
-              className="regularLink"
-              href={
-                process.env.PUBLIC_URL +
-                "STAT 184 Final Project Report - Musician Wages Analysis.html"
-              }
-              target="_blank"
-            >
+            <ProjectLink to={process.env.PUBLIC_URL + "STAT 184 Final Project Report - Musician Wages Analysis.html"}>
               here
-            </a>
+            </ProjectLink>
             .
           </p>
         </Project>
@@ -248,7 +310,7 @@ const useStyles = makeStyles((theme) => ({
   },
   content: {
     marginTop: theme.spacing(5),
-  }
+  },
 }));
 
 export default Projects;

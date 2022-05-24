@@ -13,7 +13,7 @@ const PortfolioCard = ({ title, description, image, link }) => {
     <Paper className={classes.card}>
       <Grid container>
         <Grid item xs={12}>
-          <Typography variant="h5">{title}</Typography>
+          <Typography variant="h5" className={classes.title}>{title}</Typography>
         </Grid>
         <Grid item xs={12} md={8} >
           <Typography variant="body1"><p className={classes.description}>{description}</p></Typography>
@@ -56,6 +56,9 @@ const useStyles = makeStyles((theme) => ({
   },
   spacer: {
     marginTop: theme.spacing(2),
+  },
+  title: {
+    height: "60px"
   },
   btn: {
     color: theme.palette.common.white,
