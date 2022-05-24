@@ -9,7 +9,7 @@ palette: {
         white: "whitesmoke"
     },
     primary: {
-    main: '#556cd6',
+    main: '#F28C28',
     },
     secondary: {
     main: '#19857b',

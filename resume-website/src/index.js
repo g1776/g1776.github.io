@@ -13,7 +13,8 @@ import NavProvider from './components/nav/NavProvider';
 
 import './style.css'
 
-import Home from './components/Home';
+// import Home from './components/Home';
+import Home from './components/home/';
 import Resume from './components/resume';
 import MiscSwitch from './components/misc';
 import Projects from './components/projects'

@@ -23,8 +23,8 @@ const Logo = () => {
 
 const useStyles = makeStyles((theme) => ({
     logo: {
-        color: "white",
-        backgroundColor: "#F28C28",
+        color: theme.palette.common.white,
+        backgroundColor: theme.palette.primary.main,
         fontWeight: "bolder",
         paddingTop: "3px",
         paddingBottom: "3px",
