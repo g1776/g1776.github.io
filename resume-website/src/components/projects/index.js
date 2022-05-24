@@ -19,6 +19,7 @@ const Projects = () => {
           subtitle="Startup and 2nd place winner in the Nittany Ai Challenge 2020"
           image="OpenVessel Logo.png"
           imgWidth={"100%"}
+          id="openvessel"
         >
           <p>
             This project began as a team competing for a cash prize in the{" "}

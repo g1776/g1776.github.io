@@ -9,6 +9,7 @@ const Project = (props) => {
     image,
     imgWidth = undefined,
     imgHeight = undefined,
+    id
   } = props;
 
   const classes = useStyles();
@@ -19,7 +20,7 @@ const Project = (props) => {
       <Grid item container className={classes.project}>
         <Grid item container xs={12} md={image === undefined ? 12 : 8}>
           <Grid item xs={12}>
-            <Typography variant="h4">{title}</Typography>
+            <Typography variant="h4" id={id}>{title}</Typography>
             <Typography
               variant="h5"
               style={{ paddingBottom: theme.spacing(4) }}

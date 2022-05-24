@@ -3,6 +3,13 @@ import { createMuiTheme } from '@material-ui/core/styles';
 
 // A custom theme for this app
 let theme = createMuiTheme({
+overrides: {
+    MuiButton: {
+        root: {
+            textTransform: 'none',
+        }
+    }
+},
 palette: {
     common: {
         black: "rgb(35,31,32)",

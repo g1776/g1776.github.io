@@ -27,7 +27,7 @@ function Home() {
                 <Typography variant="h6" className={classes.introParagraph}>
                 Hello! My name is Gregory Glatzer. I am a Junior at Penn State University working towards a BS in Applied Data Science. 
                 I believe that I am always growing as a learner, and that the best way to increase my skills is to listen and practice as much as I can. 
-                Whether it is side projects such as building AI for board games, or getting involved with a startup that implements AI into the medical field, 
+                Whether it is side projects such as combining music and CS, or working on team competitions such as the Nittany AI Challenge, 
                 I try to immerse myself into the world of all things data science and seize every opportunity I can get!
                 </Typography>
                 <Typography variant="h6" className={classes.introParagraph}>
