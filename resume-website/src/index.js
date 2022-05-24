@@ -9,7 +9,7 @@ import {
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { ThemeProvider } from '@material-ui/core/styles';
 import theme from './theme';
-import NavProvider from './components/NavProvider';
+import NavProvider from './components/nav/NavProvider';
 
 import './style.css'
 

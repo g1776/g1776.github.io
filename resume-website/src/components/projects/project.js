@@ -19,9 +19,7 @@ const Project = (props) => {
       <Grid item container className={classes.project}>
         <Grid item container xs={12} md={image === undefined ? 12 : 8}>
           <Grid item xs={12}>
-            <Typography variant="h2">{title}</Typography>
-          </Grid>
-          <Grid item xs={12}>
+            <Typography variant="h4">{title}</Typography>
             <Typography
               variant="h5"
               style={{ paddingBottom: theme.spacing(4) }}
@@ -36,7 +34,7 @@ const Project = (props) => {
             item
             xs={12}
             md={4}
-            style={{ alignItems: "center", justifyContent: "center" }}
+            className={classes.imgContainer}
           >
             <img
               src={process.env.PUBLIC_URL + image}
@@ -55,8 +53,17 @@ const Project = (props) => {
 
 const useStyles = makeStyles((theme) => ({
   project: {
-    marginBottom: theme.spacing(4),
+    marginBottom: theme.spacing(4)
   },
+  imgContainer: {
+    alignItems: "center",
+    [theme.breakpoints.up('md')]: {
+      justifyContent: "end"
+    },
+    [theme.breakpoints.down('md')]: {
+      justifyContent: "center"
+    }
+  }
 }));
 
 export default Project;

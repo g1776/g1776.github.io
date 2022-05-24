@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { useParams } from "react-router"
 import TeacherPie from "./TeacherPie";
-import { useNav } from '../NavProvider'
+import { useNav } from '../nav/NavProvider'
 
 
 const MiscSwitch = (props) => {

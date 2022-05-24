@@ -1,35 +1,39 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Grid, Typography } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
+import { Grid, Typography, useMediaQuery } from "@material-ui/core";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
+
+import DrawerComponent from "./Drawer";
+import Logo from "./Logo";
+
+const Section = (props) => {
+  return (
+    <Grid item xs={"auto"}>
+      <Link to={props.to} className="nav-text nav-link">
+        <Typography component="h3" variant="h5">
+          {props.children}
+        </Typography>
+      </Link>
+    </Grid>
+  );
+};
+
 
 function Nav() {
   const classes = useStyles();
-
-  const Section = (props) => {
-    return (
-      <Grid item xs={"auto"}>
-        <Link to={props.to} className="nav-text nav-link">
-          <Typography component="h3" variant="h5">
-            {props.children}
-          </Typography>
-        </Link>
-      </Grid>
-    );
-  };
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
     <nav>
+      {
+        isMobile ?
+          <DrawerComponent />
+        :
       <Grid container className={classes.navContainer}>
         <Grid item xs={12} md={5}>
           <Link to={"/"} className="nav-text">
-            <Typography
-              component="h1"
-              variant="h5"
-              className="nav-text logo-text"
-            >
-              Gregory Glatzer
-            </Typography>
+            <Logo />
           </Link>
         </Grid>
         <Grid
@@ -46,6 +50,7 @@ function Nav() {
           <Section to="/contact">Contact</Section>
         </Grid>
       </Grid>
+    }
     </nav>
   );
 }

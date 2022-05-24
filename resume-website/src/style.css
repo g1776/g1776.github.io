@@ -22,9 +22,8 @@ ul>li:before{
     margin-left: -1em;
 }
 
-.logo-text {
-    color:  #F28C28 !important;
-    font-weight: bolder;
+ul>li.no-dash:before {
+    content: "";
 }
 
 .nav-text{
