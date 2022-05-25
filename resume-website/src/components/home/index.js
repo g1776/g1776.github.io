@@ -9,6 +9,7 @@ import {
 
 import FeaturedProjects from "./FeaturedProjects";
 import InTheNews from "./InTheNews";
+import About from "./About";
 
 const Home = () => {
   const classes = useStyles();
@@ -52,6 +53,7 @@ const Home = () => {
       <div id="portfolio" className={classes.portfolio}>
         <FeaturedProjects/>
         <InTheNews/>
+        <About/>
       </div>
     </Container>
   );

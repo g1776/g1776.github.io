@@ -6,6 +6,8 @@ import {
   ListItemText,
   IconButton,
   Typography,
+  Grid,
+  useTheme
 } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import MenuIcon from "@material-ui/icons/Menu";
@@ -32,6 +34,8 @@ const DrawerComponent = () => {
   const open = () => setOpen(true);
   const close = () => setOpen(false);
 
+  const theme = useTheme();
+
   return (
     <>
       <Drawer open={isOpen} onClose={close} anchor="top">
@@ -55,9 +59,19 @@ const DrawerComponent = () => {
           </DrawerLink>
         </List>
       </Drawer>
-      <IconButton onClick={() => (isOpen ? close() : open())}>
-        <MenuIcon fontSize="large" />
-      </IconButton>
+      <Grid container style={{justifyContent: "space-between", alignItems: "center", paddingRight: theme.spacing(2)}}>
+        <Grid item>
+          <IconButton onClick={() => (isOpen ? close() : open())}>
+            <MenuIcon fontSize="large" />
+          </IconButton>
+        </Grid>
+        <Grid item>
+          <Link to={"/"} className="nav-text">
+            <Logo />
+          </Link>
+        </Grid>
+      </Grid>
+      
     </>
   );
 };
