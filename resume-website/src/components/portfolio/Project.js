@@ -2,7 +2,7 @@ import React from "react";
 import { makeStyles, useTheme } from "@material-ui/styles";
 import { Grid, Typography } from "@material-ui/core";
 
-const Project = (props) => {
+const ProjectComponent = (props) => {
   const {
     title,
     subtitle,
@@ -67,4 +67,4 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default Project;
+export default ProjectComponent;

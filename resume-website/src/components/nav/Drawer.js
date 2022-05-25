@@ -48,11 +48,8 @@ const DrawerComponent = () => {
           <DrawerLink to="/" onClick={close}>
             Home
           </DrawerLink>
-          <DrawerLink to="/resume" onClick={close}>
-            Resume/CV
-          </DrawerLink>
-          <DrawerLink to="/projects" onClick={close}>
-            Projects
+          <DrawerLink to="/portfolio" onClick={close}>
+            Portfolio
           </DrawerLink>
           <DrawerLink to="/contact" onClick={close}>
             Contact

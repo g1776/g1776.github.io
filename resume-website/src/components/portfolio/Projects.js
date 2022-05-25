@@ -2,8 +2,8 @@ import React from "react";
 import { makeStyles } from "@material-ui/styles";
 import { Grid, Typography, Container } from "@material-ui/core";
 
-import Project from "./project";
-import Header from "../Header";
+import ProjectComponent from "./Project";
+import Section from "./Section";
 
 const ProjectLink = (props) => {
   return (
@@ -21,11 +21,9 @@ const Projects = () => {
   const classes = useStyles();
 
   return (
-    <Container className={classes.root}>
-      <Header>Projects</Header>
-
+    <Section header="Projects">
       <Grid container className={classes.content}>
-        <Project
+        <ProjectComponent
           title="Elephant Movement Research with IST Faculty"
           subtitle="Applying clustering to spatial data to find locations of interest for elephants"
           image="Range Cluster Hotspots.png"
@@ -88,9 +86,9 @@ const Projects = () => {
               here.
             </ProjectLink>
           </p>
-        </Project>
+        </ProjectComponent>
 
-        <Project
+        <ProjectComponent
           title="The Mental Health Project"
           subtitle="Frontend Developer - UI/UX"
           image="TMHP.jfif"
@@ -132,9 +130,9 @@ const Projects = () => {
           <p>
             This project was part of the 2021 Nittany AI Challenge.
           </p>
-        </Project>
+        </ProjectComponent>
 
-        <Project
+        <ProjectComponent
           title="OpenVessel"
           subtitle="Startup and 2nd place winner in the Nittany Ai Challenge 2020"
           image="OpenVessel Logo.png"
@@ -179,11 +177,11 @@ const Projects = () => {
             <li>Goal Setting</li>
             <li>Technical Writing</li>
           </ul>
-        </Project>
+        </ProjectComponent>
 
     
 
-        <Project
+        <ProjectComponent
           title="EY-mentored project"
           subtitle="Dashboard application for Tax, Audit, and Consulting"
           image="EY and NDL.png"
@@ -219,9 +217,9 @@ const Projects = () => {
             <li>Interactive Bokeh Graphs</li>
             <li>Web Scraping using BeautifulSoup4</li>
           </ul>
-        </Project>
+        </ProjectComponent>
 
-        <Project
+        <ProjectComponent
           title="Using AI to play Othello"
           subtitle="Personal project"
           image="othello.jpg"
@@ -258,9 +256,9 @@ const Projects = () => {
               https://github.com/g1776/OthelloAI
             </a>
           </p>
-        </Project>
+        </ProjectComponent>
 
-        <Project
+        <ProjectComponent
           title="Analyzing Musician Wages with R"
           subtitle="Personal project"
           image="new-music-organizing-caucus.png"
@@ -298,9 +296,9 @@ const Projects = () => {
             </ProjectLink>
             .
           </p>
-        </Project>
+        </ProjectComponent>
       </Grid>
-    </Container>
+    </Section>
   );
 };
 

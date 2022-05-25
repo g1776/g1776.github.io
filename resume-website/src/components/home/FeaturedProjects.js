@@ -22,7 +22,7 @@ const FeaturedProjects = () => {
             Using DBSCAN and KMeans clustering algorithms, I developed a pipeline that yields potential &quot;locations of interest&quot; for elephants. 
             This research led to the publication of my research paper, &quot;An Analysis of Elephants' Movement Data in Sub-Saharan Africa Using Clustering&quot; in the TAWIRI Conference in Arusha, Tanzania."
             image={process.env.PUBLIC_URL + "/Range Cluster Hotspots.png"}
-            link="/projects#elephant-movement-research"
+            link="/portfolio#elephant-movement-research"
             btnText="Read More..."
             />
             </Grid>
@@ -37,7 +37,7 @@ const FeaturedProjects = () => {
             throughout this project has been developing the frontend, using
             React.js with Material UI."
             image={process.env.PUBLIC_URL + "/TMHP.jfif"}
-            link="/projects#the-mental-health-project"
+            link="/portfolio#the-mental-health-project"
             btnText="Read More..."
             />
             </Grid>

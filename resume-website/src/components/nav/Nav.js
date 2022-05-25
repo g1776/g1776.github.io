@@ -45,8 +45,7 @@ function Nav() {
           className={classes.navLinksContainer}
         >
           <Section to={"/"}>Home</Section>
-          <Section to="/resume">Resume/CV</Section>
-          <Section to="/projects">Projects</Section>
+          <Section to="/portfolio">Portfolio</Section>
           <Section to="/contact">Contact</Section>
         </Grid>
       </Grid>

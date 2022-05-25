@@ -2,7 +2,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import { Typography } from "@material-ui/core";
 
 const Section = (props) => {
-    const { hideAccent = false } = props;
+    const { divider = false } = props;
   
     const classes = useStyles();
   
@@ -12,7 +12,7 @@ const Section = (props) => {
         <Typography variant="h6" className={classes.sectionBody}>
           {props.children}
         </Typography>
-        {hideAccent ? (
+        {!divider ? (
           <div style={{ marginBottom: "102px" }}></div>
         ) : (
           <hr className={classes.hrAccent} />
