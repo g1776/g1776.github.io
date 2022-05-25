@@ -27,13 +27,6 @@ const Home = () => {
           >
             one dataset at a time...
           </Typography>
-
-          <Typography component="h2" variant="h4" className={classes.explore}>
-            Explore my portfolio below
-            <div style={{ marginTop: theme.spacing(2) }}>
-              <KeyboardArrowDownIcon fontSize="large" />
-            </div>
-          </Typography>
         </Grid>
         <Grid item xs={12} md={6} className={classes.imgContainer}>
           <img
