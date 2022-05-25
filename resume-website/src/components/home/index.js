@@ -13,6 +13,7 @@ import About from "./About";
 
 const Home = () => {
   const classes = useStyles();
+  const theme = useTheme();
   return (
     <Container className={classes.root}>
       <Grid container spacing={4}>
@@ -37,6 +38,11 @@ const Home = () => {
             >
               Download resume as a PDF
           </Button>
+  
+          <Typography variant="h6" style={{color: theme.palette.common.black}}>
+            <b>Scroll down for more</b>
+            
+          </Typography>
           </div>
           
 
@@ -94,7 +100,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.primary.main,
     color: theme.palette.common.white,
     marginTop: theme.spacing(1),
-    marginBottom: theme.spacing(3),
+    marginBottom: theme.spacing(5),
     "&:hover": {
       backgroundColor: theme.palette.primary.dark,
     },
