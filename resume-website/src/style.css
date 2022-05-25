@@ -56,3 +56,8 @@ a.regularLink{
 a.regularLink:visited{
     color: darkcyan
 }
+
+a.noDecoration, a.noDecoration:hover, a.noDecoration:focus, a.noDecoration:active {
+    text-decoration: none;
+    color: inherit;
+}

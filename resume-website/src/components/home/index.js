@@ -4,15 +4,14 @@ import {
   Grid,
   Typography,
   useTheme,
+  Button
 } from "@material-ui/core";
-import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
 
 import FeaturedProjects from "./FeaturedProjects";
 import InTheNews from "./InTheNews";
 
 const Home = () => {
   const classes = useStyles();
-  const theme = useTheme();
   return (
     <Container className={classes.root}>
       <Grid container spacing={4}>
@@ -27,6 +26,19 @@ const Home = () => {
           >
             one dataset at a time...
           </Typography>
+
+          <div style={{textAlign: "center"}}>
+            <Button 
+            variant="contained" 
+            className={classes.btn} 
+            size="large"
+            onClick={() =>  window.open(process.env.PUBLIC_URL + '/resume.pdf', "_blank")}
+            >
+              Download resume as a PDF
+          </Button>
+          </div>
+          
+
         </Grid>
         <Grid item xs={12} md={6} className={classes.imgContainer}>
           <img
@@ -75,6 +87,16 @@ const useStyles = makeStyles((theme) => ({
   },
   portfolio: {
     marginTop: theme.spacing(5),
+  },
+  btn: {
+    backgroundColor: theme.palette.primary.main,
+    color: theme.palette.common.white,
+    marginTop: theme.spacing(1),
+    marginBottom: theme.spacing(3),
+    "&:hover": {
+      backgroundColor: theme.palette.primary.dark,
+    },
+    
   },
 }));
 

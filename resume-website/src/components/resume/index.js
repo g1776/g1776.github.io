@@ -20,16 +20,7 @@ function Resume() {
       <div className={classes.root} maxWidth="md">
 
         <Header>Resume/CV</Header>
-        <div style={{textAlign: "center"}}>
-        <Button 
-          variant="contained" 
-          className={classes.btn} 
-          size="large"
-          onClick={() =>  window.open(process.env.PUBLIC_URL + '/resume.pdf', "_blank")}
-          >
-            Download resume as a PDF
-        </Button>
-        </div>
+        
 
         <Section header="Summary">
           Incoming senior pursuing a Bachelor of Science in Applied Data Science with a
@@ -226,16 +217,7 @@ const useStyles = makeStyles((theme) => ({
     left: "50%",
     transform: "translate(-50%, -50%)",
   },
-  btn: {
-    backgroundColor: theme.palette.primary.main,
-    color: theme.palette.common.white,
-    marginTop: theme.spacing(1),
-    marginBottom: theme.spacing(3),
-    "&:hover": {
-      backgroundColor: theme.palette.primary.dark,
-    },
-    
-  },
+  
   skills: {
     margin: 0,
     padding: 0,
