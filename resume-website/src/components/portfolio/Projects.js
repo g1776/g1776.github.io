@@ -17,13 +17,8 @@ const ProjectLink = (props) => {
   );
 };
 
-const Projects = () => {
-  const classes = useStyles();
-
-  return (
-    <Section header="Projects">
-      <Grid container className={classes.content}>
-        <ProjectComponent
+const projectsList = [
+  <ProjectComponent
           title="Elephant Movement Research with IST Faculty"
           subtitle="Applying clustering to spatial data to find locations of interest for elephants"
           image="Range Cluster Hotspots.png"
@@ -86,9 +81,8 @@ const Projects = () => {
               here.
             </ProjectLink>
           </p>
-        </ProjectComponent>
-
-        <ProjectComponent
+  </ProjectComponent>,
+  <ProjectComponent
           title="The Mental Health Project"
           subtitle="Frontend Developer - UI/UX"
           image="TMHP.jfif"
@@ -130,9 +124,8 @@ const Projects = () => {
           <p>
             This project was part of the 2021 Nittany AI Challenge.
           </p>
-        </ProjectComponent>
-
-        <ProjectComponent
+  </ProjectComponent>,
+  <ProjectComponent
           title="OpenVessel"
           subtitle="Startup and 2nd place winner in the Nittany Ai Challenge 2020"
           image="OpenVessel Logo.png"
@@ -177,15 +170,13 @@ const Projects = () => {
             <li>Goal Setting</li>
             <li>Technical Writing</li>
           </ul>
-        </ProjectComponent>
-
-    
-
-        <ProjectComponent
+  </ProjectComponent>,
+  <ProjectComponent
           title="EY-mentored project"
           subtitle="Dashboard application for Tax, Audit, and Consulting"
           image="EY and NDL.png"
           imgWidth={"60%"}
+          id="ey"
         >
           <p>
             In this project, I worked in a team of 3 to develop a dashboard
@@ -217,13 +208,13 @@ const Projects = () => {
             <li>Interactive Bokeh Graphs</li>
             <li>Web Scraping using BeautifulSoup4</li>
           </ul>
-        </ProjectComponent>
-
-        <ProjectComponent
+  </ProjectComponent>,
+  <ProjectComponent
           title="Using AI to play Othello"
           subtitle="Personal project"
           image="othello.jpg"
           imgWidth={"80%"}
+          id="othello"
         >
           <p>
             This project was a passion project of mine. I always enjoyed playing
@@ -256,13 +247,13 @@ const Projects = () => {
               https://github.com/g1776/OthelloAI
             </a>
           </p>
-        </ProjectComponent>
-
-        <ProjectComponent
+  </ProjectComponent>,
+  <ProjectComponent
           title="Analyzing Musician Wages with R"
           subtitle="Personal project"
           image="new-music-organizing-caucus.png"
           imgWidth={"60%"}
+          id="musician-wages"
         >
           <p>
             Growing up I was surrounded by music. My father played piano nearly
@@ -296,7 +287,16 @@ const Projects = () => {
             </ProjectLink>
             .
           </p>
-        </ProjectComponent>
+  </ProjectComponent>
+]
+
+const Projects = () => {
+  const classes = useStyles();
+
+  return (
+    <Section header="Projects" id="projects">
+      <Grid container className={classes.content}>
+        {projectsList}
       </Grid>
     </Section>
   );
@@ -311,4 +311,4 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default Projects;
+export {Projects, projectsList};

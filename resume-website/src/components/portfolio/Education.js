@@ -8,7 +8,7 @@ function Education() {
   const classes = useStyles();
 
   return (
-    <Section header="Education">
+    <Section header="Education" id="education">
           <b>
             The Pennsylvania State University, College of Information Sciences
             and Technology

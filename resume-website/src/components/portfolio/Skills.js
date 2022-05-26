@@ -8,7 +8,7 @@ function Skills() {
   const classes = useStyles();
 
   return (
-    <Section header="Skills">
+    <Section header="Skills" id="skills">
           <Typography variant="h6">
             <Grid container spacing={6}>
               <Grid item xs={12} md={4}>

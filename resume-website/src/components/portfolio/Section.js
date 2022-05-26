@@ -8,7 +8,7 @@ const Section = (props) => {
   
     return (
       <section>
-        <Typography variant="h3">{props.header}</Typography>
+        <Typography variant="h3" id={props.id}>{props.header}</Typography>
         <Typography variant="h6" className={classes.sectionBody}>
           {props.children}
         </Typography>
@@ -30,8 +30,7 @@ const useStyles = makeStyles((theme) => ({
         background: "#153040",
       },
     sectionBody: {
-      paddingTop: theme.spacing(5),
-      paddingBottom: theme.spacing(3),
+      paddingTop: theme.spacing(2),
     },
 }))
 

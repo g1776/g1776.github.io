@@ -5,7 +5,7 @@ import {
   Button,
   Paper,
 } from "@material-ui/core";
-import { Link } from 'react-router-dom'
+import { HashLink } from 'react-router-hash-link';
 
 const PortfolioCard = ({ title, description, image, link, btnText, externalLink=false }) => {
   const classes = useStyles();
@@ -54,8 +54,9 @@ const PortfolioCard = ({ title, description, image, link, btnText, externalLink=
 
             : 
               <Button
-              component={Link}
+              component={HashLink}
               to={link}
+              smooth
               variant="contained"
               color="primary"
               className={classes.btn}
