@@ -1,9 +1,10 @@
 import React from "react";
 import { makeStyles } from "@material-ui/styles";
-import { Grid, Typography, Container } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 
 import ProjectComponent from "./Project";
 import Section from "./Section";
+import {DS_MLChip, WebdevChip, OtherChip} from './Skills';
 
 const ProjectLink = (props) => {
   return (
@@ -24,6 +25,16 @@ const projectsList = [
           image="Range Cluster Hotspots.png"
           imgWidth={"80%"}
           id="elephant-movement-research"
+          chips={[
+            <DS_MLChip label="Python" />,
+            <DS_MLChip label="Scikit-learn" />,
+            <DS_MLChip label="Matplotlib" />,
+            <DS_MLChip label="Pandas/Numpy" />,
+            <DS_MLChip label="Geopandas" />,
+            <DS_MLChip label="Shapely" />,
+            <DS_MLChip label="Clustering Algorithms" />,
+            <DS_MLChip label="Streamlit" />,
+          ]}
         >
           <p>
             Working with IST Faculty at Penn State, I conducted research on the

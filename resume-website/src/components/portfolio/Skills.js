@@ -4,6 +4,30 @@ import { makeStyles} from "@material-ui/core/styles";
 
 import Section from './Section';
 
+const DS_MLChip = ({label}) => {
+  const classes = useStyles();
+  return <Chip
+  label={label}
+  className={classes.DS_ML}
+/>
+}
+
+const WebdevChip = ({label}) => {
+  const classes = useStyles();
+  return <Chip
+  label={label}
+  className={classes.webdev}
+/>
+}
+
+const OtherChip = ({label}) => {
+  const classes = useStyles();
+  return <Chip
+  label={label}
+  className={classes.other}
+/>
+}
+
 function Skills() {
   const classes = useStyles();
 
@@ -12,10 +36,7 @@ function Skills() {
           <Typography variant="h6">
             <Grid container spacing={6}>
               <Grid item xs={12} md={4}>
-                <Chip
-                  label="Data Science / Machine Learning"
-                  className={classes.DS_ML}
-                />
+                <DS_MLChip label="Data Science / Machine Learning"/>
                 <ul className={classes.skills}>
                   <li>Python</li>
                   <li>Scikit-learn</li>
@@ -28,10 +49,7 @@ function Skills() {
                 </ul>
               </Grid>
               <Grid item xs={12} md={4}>
-                <Chip
-                  label="Web development"
-                  className={classes.webdev}
-                />
+                <WebdevChip label="Web development"/>
                 <ul className={classes.skills}>
                   <li>React, Flask</li>
                   <li>HTML/CSS, JavaScript</li>
@@ -42,10 +60,7 @@ function Skills() {
                 </ul>
               </Grid>
               <Grid item xs={12} md={4}>
-                <Chip
-                  label="Other"
-                  className={classes.other}
-                />
+                <OtherChip label="Other"/>
                 <ul className={classes.skills}>
                   <li>All-national, all-eastern, all-state clarinetist</li>
                   <li>Saxophonist</li>
@@ -57,6 +72,9 @@ function Skills() {
         </Section>
   );
 }
+
+
+
 
 const useStyles = makeStyles((theme) => ({
   
@@ -87,4 +105,4 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export { Skills, useStyles };
+export { Skills, DS_MLChip, WebdevChip, OtherChip };
