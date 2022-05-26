@@ -99,6 +99,13 @@ const projectsList = [
           image="TMHP.jfif"
           imgWidth="50%"
           id="the-mental-health-project"
+          chips={[
+            <WebdevChip label="React.js" />,
+            <WebdevChip label="Material-UI" />,
+            <WebdevChip label="Interative UI design" />,
+            <WebdevChip label="API development" />,
+            <WebdevChip label="Working with UI professionals" />,
+          ]}
         >
           <p>
             In this project, I worked on building a Clinical Decision Support (CDS) tool to aid mental health
@@ -123,15 +130,8 @@ const projectsList = [
             be open to learning a new way of building a prototype. Finally, I
             got exposure to the world of mental health, and the unique issues
             and poain points experienced by professionals in the field that can
-            be addressed with technology solutions. Some skills I learned
-            throughout this experience have been:
+            be addressed with technology solutions.
           </p>
-          <ul>
-            <li>Iterative design of UI interfaces</li>
-            <li>Working with an in-house API</li>
-            <li>Adapting to feedback from UI professionals</li>
-            <li>Working with the Material UI CSS framework</li>
-          </ul>
           <p>
             This project was part of the 2021 Nittany AI Challenge.
           </p>
@@ -142,6 +142,17 @@ const projectsList = [
           image="OpenVessel Logo.png"
           imgWidth={"100%"}
           id="openvessel"
+          chips={[
+            <DS_MLChip label="Python" />,
+            <DS_MLChip label="Computer Vision" />,
+            <DS_MLChip label="SQLite" />,
+            <DS_MLChip label="Git/Github" />,
+            <WebdevChip label="Flask" />,
+            <WebdevChip label="HTML/CSS" />,
+            <OtherChip label="Technical Writing" />,
+            <OtherChip label="Team Management" />,
+            
+          ]}
         >
           <p>
             This project began as a team competing for a cash prize in the{" "}
@@ -172,53 +183,6 @@ const projectsList = [
             base via Git and GitHub, and learned many technical skills,
             including:
           </p>
-          <ul>
-            <li>Python</li>
-            <li>HTML/CSS</li>
-            <li>Flask</li>
-            <li>SQLite</li>
-            <li>Team Leading</li>
-            <li>Goal Setting</li>
-            <li>Technical Writing</li>
-          </ul>
-  </ProjectComponent>,
-  <ProjectComponent
-          title="EY-mentored project"
-          subtitle="Dashboard application for Tax, Audit, and Consulting"
-          image="EY and NDL.png"
-          imgWidth={"60%"}
-          id="ey"
-        >
-          <p>
-            In this project, I worked in a team of 3 to develop a dashboard
-            aimed at helping consultants with their day-to-day operations. The
-            concept behind the project was that a consultant could come to the
-            dashboard before a meeting with a client, and get a quick overview
-            of what is happening in the world related to that client. In order
-            to achieve this, we implemented web scraping procedures to grab
-            legal information relavent to EY tax and audit employees, as well as
-            requested data from stock and twitter APIs.
-          </p>
-          <p>
-            Using this information, we were able to create an interactive
-            dashboard that included Bokeh graphs, sentiment analysis graphs
-            based on twitter data, and summaries of the legal articles generated
-            using AI summarization tools. All of this was hosted on a webapp
-            built with the Flask web framework. During development, we were
-            mentored by an EY employee that gave us tips on what would be useful
-            to a consultant and some insight into their everyday workflow. This
-            gave me the opprtunity to learn how to communicate technical ideas
-            to an otherwise non-technical partner. Throughout this project I
-            learned many skills, including:
-          </p>
-          <ul>
-            <li>Building applications with the Flask web framework</li>
-            <li>Making API requests</li>
-            <li>Constructing a SQLite Database</li>
-            <li>TKinter</li>
-            <li>Interactive Bokeh Graphs</li>
-            <li>Web Scraping using BeautifulSoup4</li>
-          </ul>
   </ProjectComponent>,
   <ProjectComponent
           title="Using AI to play Othello"
@@ -226,6 +190,12 @@ const projectsList = [
           image="othello.jpg"
           imgWidth={"80%"}
           id="othello"
+          chips={[
+            <DS_MLChip label="Python" />,
+            <DS_MLChip label="Pygame" />,
+            <DS_MLChip label="Game Theory" />,
+            <OtherChip label="Writing" />
+          ]}
         >
           <p>
             This project was a passion project of mine. I always enjoyed playing
@@ -265,6 +235,12 @@ const projectsList = [
           image="new-music-organizing-caucus.png"
           imgWidth={"60%"}
           id="musician-wages"
+          chips={[
+            <DS_MLChip label="R" />,
+            <DS_MLChip label="ggplot" />,
+            <DS_MLChip label="Data analysis, cleaning, and visualization" />,
+            <DS_MLChip label="Presentation of Findings" />
+          ]}
         >
           <p>
             Growing up I was surrounded by music. My father played piano nearly
