@@ -9,7 +9,8 @@ import Section from './Section';
 import Header from "../Header";
 import {Skills} from './Skills';
 import Education from "./Education";
-import {Projects, projectsList} from "./Projects";
+import Projects from "./projects";
+import projectsList from "./projects/ProjectsList";
 
 
 const PortfolioAnchorLink = (props) => {
