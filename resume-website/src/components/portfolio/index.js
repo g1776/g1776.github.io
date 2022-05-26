@@ -49,8 +49,8 @@ function Portfolio() {
 
         <Section header="Contents" hideAccent>
           {/* <Typography component="h3" variant="h4">Click to jump to content</Typography> */}
-          <PortfolioAnchorLink label="Skills" to="skills"/>
           <PortfolioAnchorLink label="Education" to="education"/>
+          <PortfolioAnchorLink label="Skills" to="skills"/>
           <PortfolioAnchorLink label="Projects" to="projects"/>
           {
             projectsList.map(project => {
@@ -63,9 +63,8 @@ function Portfolio() {
 
         </Section>
 
-
-        <Skills />
         <Education />
+        <Skills />
         <Projects />
         
       </div>

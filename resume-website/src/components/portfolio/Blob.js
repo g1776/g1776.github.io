@@ -57,14 +57,43 @@ const Blob = (props) => {
 
 
 const Blobs = () => {
+    
+    const pagePcnt = 12; // 2 = 200%, etc.
+    const blobs = [...Array(pagePcnt).keys()].map(i => {
+
+            // decide if a blob will be created
+             const createBlobAtLocation = Math.random() > 0.3;
+             if (!createBlobAtLocation){
+                 return null;
+             }
+       
+  
+             const isLeft = Math.random() > 0.5;
+             const left = isLeft ? Math.random() * 40 : 60 + Math.random() * 40;
+
+              return <>
+              <canvas
+                id={`canvas-${i}`}
+                style={{
+                  position: "absolute",
+                  top: `${(i+1) * 100}%`,
+                  left: `${left}%`,
+                  width: `${10 + Math.random() * 15}%`,
+                }}
+              ></canvas>
+              <Blob id={`canvas-${i}`} />
+              </>
+    })
+
     return <div style={{ zIndex: 1 }}>
         {/* <canvas id="my-canvas" style={{position: "absolute", top: "50%", left: 0, width: "10%"}}></canvas>
             <Blob id="my-canvas"/> */}
-        <canvas
+        {blobs}
+        {/* <canvas
           id="my-canvas2"
           style={{
             position: "absolute",
-            top: "100%",
+            top: "500%",
             left: "80%",
             width: "23%",
           }}
@@ -100,6 +129,17 @@ const Blobs = () => {
           }}
         ></canvas>
         <Blob id="my-canvas5" />
+        <canvas
+          id="my-canvas6"
+          style={{
+            position: "absolute",
+            top: "600%",
+            left: "30%",
+            width: "20%",
+          }}
+        ></canvas>
+        <Blob id="my-canvas5" /> */}
+        
       </div>
 }
 
