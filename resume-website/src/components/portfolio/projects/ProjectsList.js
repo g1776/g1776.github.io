@@ -72,6 +72,42 @@ const projectsList = [
             </p>
     </Project>,
     <Project
+            title="CV-BAGLE"
+            subtitle="Computer Vision-Based Glyph and Label Extraction"
+            image="CV-BAGLE.png"
+            imgWidth={"70%"}
+            id="cv-bagle"
+            buttonLinks={[
+              {text: "Read the paper", url: process.env.PUBLIC_URL + "/Computer_Vision_BAsed_Glyph_and_Label_Extraction__CV_BAGLE.pdf"}
+            ]}
+            chips={[
+              <DS_MLChip label="Computer Vision" />,
+              <DS_MLChip label="OpenCV" />,
+              <DS_MLChip label="Python" />,
+              <DS_MLChip label="Synthetic Data Generation"/>
+
+            ]}
+
+    >
+      <p>
+      From the nightly news to academic papers, you can find visualizations
+      nearly everywhere. In the CV-BAGLE project, my team and I developed a tool that extracts glyphs and labels from
+      data visualizations. An example of a glyph is a bar in a bar chart, or a line in a line chart. Labels can consist
+      of supplementary text in the chart, axis labels, legends, etc. Using a combination of computer vision techniques,
+      namely with OpenCV, along with OCR techniques (Tesseract), we were able to extract glyphs and labels from data visualizations.
+      From these extracted glyphs and labels, we then engineered features to be fed into a classifier to classify the chart type.
+      For our classification task, we achieved a training accuracy of 98.15% and testing accuracy of 81.60%. 
+      </p>
+      <p>
+          This project involved a state-of-the-art challenge, which was no small task for my team, even though this
+          was a semester-long project. I learned a lot during the project, including best practices for image preprocessing when
+          performing contour extraction and OCR tasks. I also learned the difficulty of working with large image datasets and the
+          drawbacks of synthetic image generation. Finally, this project showed me what it was like to work on a team for an extended period of time 
+          on a research project where we needed to truly start from scratch. If you would like to read about our research, you can find the full paper below.
+      </p>
+      
+    </Project>,
+    <Project
             title="The Mental Health Project"
             subtitle="Frontend Developer - UI/UX"
             image="TMHP.jfif"
