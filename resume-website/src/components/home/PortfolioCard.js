@@ -56,7 +56,6 @@ const PortfolioCard = ({ title, description, image, link, btnText, externalLink=
               <Button
               component={HashLink}
               to={link}
-              smooth
               variant="contained"
               color="primary"
               className={classes.btn}

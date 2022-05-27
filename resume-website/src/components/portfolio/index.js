@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import { Typography } from "@material-ui/core";
+import { Typography, Button } from "@material-ui/core";
 import $ from "jquery";
 import { makeStyles, useTheme} from "@material-ui/core/styles";
 import { HashLink } from 'react-router-hash-link';
@@ -84,6 +84,12 @@ function Portfolio() {
         <Projects />
         
       </div>
+
+      <Button 
+        className={classes.toTop} 
+        variant="contained"
+        onClick={() => window.scrollTo(0, 0)}
+        >Back to top &uarr;</Button>
     </React.Fragment>
   );
 }
@@ -124,8 +130,17 @@ const useStyles = makeStyles((theme) => ({
     "&:visited": {color: theme.palette.common.black},
     "&:hover": {color: theme.palette.primary.main},
     "&:active": {color: theme.palette.primary.main},
-
   },
+  toTop: {
+    position: "fixed",
+    bottom: 10,
+    right: 10,
+    backgroundColor: "#F28C2880",
+    "&:hover": {
+      backgroundColor: theme.palette.primary.main,
+    },
+    fontSize: "0.8rem",
+  }
   
 }));
 
