@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles, useTheme } from "@material-ui/styles";
-import { Grid, Typography } from "@material-ui/core";
+import { Grid, Typography, Button } from "@material-ui/core";
 
 const Project = (props) => {
   const {
@@ -11,6 +11,7 @@ const Project = (props) => {
     imgHeight = undefined,
     id,
     noDivider = false,
+    chips
   } = props;
 
   const classes = useStyles();
@@ -51,15 +52,38 @@ const Project = (props) => {
           <Typography variant="body1">{props.children}</Typography>
         </Grid>
 
+        {/* Button Links */}
+        {
+          props.buttonLinks &&
+          
+          <Grid item container xs={12} spacing={2} className={classes.btnsContainer}>
+          {props.buttonLinks.map((link) => (
+            <Grid item>
+                <Button 
+                  variant="contained" 
+                  color="secondary" 
+                  size="medium"
+                  className={classes.btn}
+                  onClick={() =>  window.open(link.url, "_blank")}
+                  >
+                  {link.text}
+                </Button>
+       
+            </Grid>
+          ))}
+        </Grid>
+        }
+        
+
         {/* Skills */}
-        {props.chips &&
+        {chips &&
 
         <>
           <Grid item xs={12} style={{marginBottom: theme.spacing(2)}}>
             <Typography variant="h4">Project Skills</Typography>
           </Grid>
           <Grid container spacing={2}>
-            {props.chips.map(chip => <Grid item>{chip}</Grid>)}
+            {chips.map(chip => <Grid item>{chip}</Grid>)}
           </Grid>
         </>
         }
@@ -97,6 +121,19 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "40px",
     background: "#153040",
   },
+  btn: {
+    backgroundColor: theme.palette.primary.main,
+    color: theme.palette.common.white,
+    "&:hover": {
+      backgroundColor: theme.palette.primary.dark,
+    }
+  },
+  btnsContainer: {
+    justifyContent: "end", 
+    margin: 0, 
+    padding: 0, 
+    marginBottom: theme.spacing(2)
+  }
 }));
 
 export default Project;

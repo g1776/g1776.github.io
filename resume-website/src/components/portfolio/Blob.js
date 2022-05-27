@@ -65,7 +65,6 @@ const Blobs = ({pcnt}) => {
              const isLeft = Math.random() > 0.5;
              const left = isLeft ? Math.random() * 40 : 60 + Math.random() * 40;
 
-              console.log(`${(i+1) * 100}%`)
               return <>
               <canvas
                 id={`canvas-${i}`}

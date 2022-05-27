@@ -225,6 +225,10 @@ const projectsList = [
               <DS_MLChip label="Data analysis, cleaning, and visualization" />,
               <DS_MLChip label="Presentation of Findings" />
             ]}
+            buttonLinks={[
+              {text: "View Report EDA", url: process.env.PUBLIC_URL + "STAT 184 Final Project EDA.html"},
+              {text: "View Final Report", url: process.env.PUBLIC_URL + "STAT 184 Final Project Report - Musician Wages Analysis.html"}
+            ]}
             noDivider
           >
             <p>
@@ -245,19 +249,7 @@ const projectsList = [
               This project has been the biggest project in R I have done to date.
               I learned many useful skills, including ggplot graphing tools, and
               dataframe manipulating with tidyverse tools. This was my final
-              project submission for STAT 184: Introduction to R at Penn State. An
-              precursor to this final report was EDA of the data sources which can
-              be found
-              <ProjectLink to={process.env.PUBLIC_URL + "STAT 184 Final Project EDA.html"}>
-                here
-              </ProjectLink>
-            </p>
-            <p>
-              The final report can be found{" "}
-              <ProjectLink to={process.env.PUBLIC_URL + "STAT 184 Final Project Report - Musician Wages Analysis.html"}>
-                here
-              </ProjectLink>
-              .
+              project for STAT 184: Introduction to R at Penn State.
             </p>
     </Project>
   ]
