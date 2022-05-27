@@ -108,6 +108,49 @@ const projectsList = [
       
     </Project>,
     <Project
+            title="Intonation Map Creator"
+            subtitle="Personal Project - Building data visualizations for musicians' intonation"
+            image="IntonationMap Logo.png"
+            imgWidth="70%"
+            id="intonation-map-creator"
+            chips={[
+              <DS_MLChip label="Data Visualization" />,
+              <DS_MLChip label="Database management" />,
+              <WebdevChip label="React.js" />,
+              <WebdevChip label="D3.js" />,
+              <WebdevChip label="Full stack development" />,
+              <WebdevChip label="User management" />,
+              <OtherChip label="Iterative Design" />,
+              
+            ]}
+            buttonLinks={[
+              {text: "Visit the site", url: "https://intonationmap.com/"}
+            ]}
+    >
+      <p>
+        Any musician knows the frustration that comes with playing in tune. For many less-experienced musicians,
+        intonation can be a hard to grasp concept. One technique to help with intonation is to internalize the relative
+        intonation tendencies on your instrument. However, this can be hard to memorize and to interalize trends throughout your intrstrument,
+        let alone across multiple instruments.
+      </p>
+      <p>
+        Intonation Map Creator aims to help musicians visualize their intonation tendencies through a specially-designed data visualization
+        that combines traditional musical notation along with easy to understand data viz trends. With this, Intonation Map Creator brings
+        modern technology and data visualization techniques into the musician's practice room.
+      </p>
+      <p>
+        While working on this project, I consulted with many of my clarinetist friends in the Penn State School of Music, as well
+        as Dr. Anthony Costa, who runs the Clarinet Studio at Penn State. Using an iterative design process, I worked with Dr. Costa on the design
+        of the data visualization to best understand the needs of a musician working on intonation. Through this process, I learned about the incitricies of intonation practice,
+        which, in addition to helping me design the application, also helped me as a clarinetist myself.
+      </p>
+      <p>
+        The Intonation Map Creator application is deployed as a React app with the visualization created in D3.js, and the backend and hosting powered by Google Firebase.
+        This project allowed to to learn a lot about advanced data visualization design, user data management, and full-stack web development.
+      </p>
+
+    </Project>,
+    <Project
             title="The Mental Health Project"
             subtitle="Frontend Developer - UI/UX"
             image="TMHP.jfif"

@@ -28,16 +28,15 @@ const FeaturedProjects = () => {
             </Grid>
             <Grid item xs={12} md={6}>
             <PortfolioCard
-            title="The Mental Health Project"
-            description="In this project, I worked on building a 
-            Clinical Decision Support (CDS) tool to aid mental health
-            profesionals in the intake process. Using machine learning processes
-            hosted on Azure, we processed hand-written forms and displaying
-            the summarized results in custom-built dashboard. My main role
-            throughout this project has been developing the frontend, using
-            React.js with Material UI."
-            image={process.env.PUBLIC_URL + "/TMHP.jfif"}
-            link="/portfolio#the-mental-health-project"
+            title="Computer Vision-Based Glyph and Label Extraction (CV-BAGLE)"
+            description="From the nightly news to academic papers, you can find visualizations
+            nearly everywhere. In the CV-BAGLE project, my team and I developed a tool that extracts glyphs and labels from
+            data visualizations. An example of a glyph is a bar in a bar chart, or a line in a line chart. Labels can consist
+            of supplementary text in the chart, axis labels, legends, etc. Using a combination of computer vision techniques,
+            namely with OpenCV, along with OCR techniques (Tesseract), we were able to extract glyphs and labels from data visualizations.
+            From these extracted glyphs and labels,"
+            image={process.env.PUBLIC_URL + "/CV-BAGLE.png"}
+            link="/portfolio#cv-bagle"
             btnText="Read More..."
             />
             </Grid>
