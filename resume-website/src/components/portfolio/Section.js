@@ -9,7 +9,7 @@ const Section = (props) => {
     return (
       <section>
         <Typography variant="h3" id={props.id}>{props.header}</Typography>
-        <Typography variant="h6" className={classes.sectionBody}>
+        <Typography variant="body1" className={classes.sectionBody}>
           {props.children}
         </Typography>
         {!divider ? (

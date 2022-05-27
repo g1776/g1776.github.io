@@ -33,7 +33,7 @@ function Skills() {
 
   return (
     <Section header="Skills" id="skills">
-          <Typography variant="h6">
+          <Typography variant="body1">
             <Grid container spacing={6}>
               <Grid item xs={12} md={4}>
                 <DS_MLChip label="Data Science / Machine Learning"/>

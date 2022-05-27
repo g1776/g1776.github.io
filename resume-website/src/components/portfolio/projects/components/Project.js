@@ -11,7 +11,8 @@ const Project = (props) => {
     imgHeight = undefined,
     id,
     noDivider = false,
-    chips
+    chips,
+    buttonLinks
   } = props;
 
   const classes = useStyles();
@@ -54,10 +55,10 @@ const Project = (props) => {
 
         {/* Button Links */}
         {
-          props.buttonLinks &&
+          buttonLinks &&
           
           <Grid item container xs={12} spacing={2} className={classes.btnsContainer}>
-          {props.buttonLinks.map((link) => (
+          {buttonLinks.map((link) => (
             <Grid item>
                 <Button 
                   variant="contained" 

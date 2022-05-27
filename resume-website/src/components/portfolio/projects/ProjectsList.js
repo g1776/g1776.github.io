@@ -19,6 +19,10 @@ const projectsList = [
               <DS_MLChip label="Clustering Algorithms" />,
               <DS_MLChip label="Streamlit" />,
             ]}
+            buttonLinks={[
+              {text: "Listen to my Data Skeptic interview", url: "https://dataskeptic.com/blog/episodes/2022/tracking-elephant-clusters"},
+              {text: "Read the paper", url: "https://www.researchgate.net/publication/355941394_An_Analysis_of_Elephants'_Movement_Data_in_Sub-Saharan_Africa_Using_Clustering/"}
+            ]}
           >
             <p>
               Working with IST Faculty at Penn State, I conducted research on the
@@ -64,17 +68,7 @@ const projectsList = [
               As my paper gained exposure, I have been reached out by several
               people regarding my work. Notably, I was contacted by the popular
               data science podcast, Data Skeptic, who interviewed me for their
-              series about clustering! You can listen to their podcast episodes
-              <ProjectLink to="https://dataskeptic.com/blog/episodes/2022/tracking-elephant-clusters">
-                here.
-              </ProjectLink>
-            </p>
-  
-            <p>
-              You can view the research paper
-              <ProjectLink to="https://www.researchgate.net/publication/355941394_An_Analysis_of_Elephants'_Movement_Data_in_Sub-Saharan_Africa_Using_Clustering/">
-                here.
-              </ProjectLink>
+              series about clustering!
             </p>
     </Project>,
     <Project
@@ -169,48 +163,46 @@ const projectsList = [
             </p>
     </Project>,
     <Project
-            title="Using AI to play Othello"
+            title="Teaching an AI to play Chrome Dinosaur 🦖"
             subtitle="Personal project"
-            image="othello.jpg"
+            image="dino.gif"
             imgWidth={"80%"}
-            id="othello"
+            id="chrome-dino"
             chips={[
               <DS_MLChip label="Python" />,
               <DS_MLChip label="Pygame" />,
-              <DS_MLChip label="Game Theory" />,
+              <DS_MLChip label="NEAT-Python" />,
+              <DS_MLChip label="Neural Networks" />,
+              <DS_MLChip label="Simulations" />,
               <OtherChip label="Writing" />
+            ]}
+            buttonLinks={[
+              {text: "View the code on GitHub", url: "https://github.com/g1776/ChromeDinoNEAT"},
+              {text: "Read about it on Medium", url: "https://medium.com/@gregoryg323/neural-networks-play-chromes-dino-game-with-neat-python-defe7c46a7f8"}
             ]}
           >
             <p>
-              This project was a passion project of mine. I always enjoyed playing
-              the game Othello, and wanted to recreate it from scratch using
-              python. I used tkinter to recreate the interface of an Othello
-              board, and built my own AI algorithm from scratch to play against
-              me. Once I had the model built, I was able to train it against
-              itself, me, or other models in order to judge (and graph!) its
-              performance. The process of creating the game is documented in a
-              Medium post of mine, which you can reached
-              <ProjectLink to="https://medium.com/@gregoryg323/building-the-classic-othello-board-game-for-ai-8a42ba2d7f13">
-              here
-              </ProjectLink>
-              .
+              The classic Chrome Dinosaur game. If you're not familiar with it,
+              turn off your Wi-FI and open a new tab in Google Chrome for a surprise!
+              In this project, I taught an AI how to play Chrome Dinosaur using the
+              Python package "NEAT-Python". This package uses uses a genetic-inspired algorithm
+              called NEAT (NeuroEvolution of Augmenting Topologies) to create a neural Networks
+              that evolves over generations to get better at playing the game.
             </p>
+
             <p>
-              While researching the best way to build this tool, I read several
-              scholarly articles on game theory and the implementation of it as
-              concerned to the game of Othello. It was very interesting to expose
-              myself to this niche field of computer science, and to see all the
-              amazing projects that have been done in the field already!
+              When deciding how to approach this project, a first question I had to ask was in what environment
+              I wanted to work in to train the AI agent. After doing some research, I found a version of
+              Chrome Dinosaur recreated with Pygame, which makes integration with NEAT-Python much easier.
+              After setting up my environment, I had to decide how the agent would be trained. This involved
+              understand what inputs the agent has access to to understand the state of the game, as well as
+              what controls (in this case, jump) it has. With this set up, training began.
             </p>
+
             <p>
-              You can check out my GitHub repo for this project at{" "}
-              <a
-                className="regularLink"
-                href="https://github.com/g1776/OthelloAI"
-                target="_blank"
-              >
-                https://github.com/g1776/OthelloAI
-              </a>
+              At the end of the project, I was able to train an AI that seemed to be unbeatable, as it 
+              learned to make pixel perfect jumps. You can try out the project for yourself by cloning the GitHub 
+              repo below. Also, feel free to read more about the project in my Medium post below.
             </p>
     </Project>,
     <Project
