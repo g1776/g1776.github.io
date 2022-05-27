@@ -48,18 +48,12 @@ const Blob = (props) => {
     subtree: true
     });
 
-
-    
-
     return myBlob
-    
 }
 
 
-const Blobs = () => {
-    
-    const pagePcnt = 12; // 2 = 200%, etc.
-    const blobs = [...Array(pagePcnt).keys()].map(i => {
+const Blobs = ({pcnt}) => {
+    const blobs = [...Array(Math.floor(pcnt)).keys()].map(i => {
 
             // decide if a blob will be created
              const createBlobAtLocation = Math.random() > 0.3;
@@ -71,6 +65,7 @@ const Blobs = () => {
              const isLeft = Math.random() > 0.5;
              const left = isLeft ? Math.random() * 40 : 60 + Math.random() * 40;
 
+              console.log(`${(i+1) * 100}%`)
               return <>
               <canvas
                 id={`canvas-${i}`}

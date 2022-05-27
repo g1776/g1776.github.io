@@ -1,7 +1,9 @@
-import { Grid, Link, Typography, Chip } from "@material-ui/core";
-import React from "react";
+import React, {useState, useEffect} from "react";
+import { Typography } from "@material-ui/core";
+import $ from "jquery";
 import { makeStyles, useTheme} from "@material-ui/core/styles";
 import { HashLink } from 'react-router-hash-link';
+import useWindowSize from "../../useWindowSize";
 
 // import parts of the resume
 import Blobs from "./Blob";
@@ -38,11 +40,24 @@ const ProjectAnchorLink = (props) => {
 
 function Portfolio() {
   const classes = useStyles();
+  const windowSize = useWindowSize();
+  const [blobs, setBlobs] = useState(null);
+
+  useEffect(() => {
+
+    // calculate blob pcnt 
+    // (what percent of the window (>100%) has content that we should render blobs in?)
+    const screenHeight = window.screen.height
+    const htmlHeight = $(document).height();
+    const pcnt = (screenHeight / htmlHeight) * 100;
+    
+    setBlobs(<Blobs pcnt={pcnt}/>)
+  },[windowSize]);
 
   return (
     <React.Fragment>
 
-      <Blobs/>
+      {blobs}
 
       <div className={classes.root} maxWidth="md">
 

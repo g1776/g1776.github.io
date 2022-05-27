@@ -225,6 +225,7 @@ const projectsList = [
               <DS_MLChip label="Data analysis, cleaning, and visualization" />,
               <DS_MLChip label="Presentation of Findings" />
             ]}
+            noDivider
           >
             <p>
               Growing up I was surrounded by music. My father played piano nearly

@@ -4,7 +4,9 @@ import { Grid } from "@material-ui/core";
 import Section from "../Section";
 import projectsList from "../projects/ProjectsList";
 
+
 const Projects = () => {
+
   const classes = useStyles();
   return (
     <Section header="Projects" id="projects">

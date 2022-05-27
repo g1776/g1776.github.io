@@ -10,7 +10,7 @@ const Project = (props) => {
     imgWidth = undefined,
     imgHeight = undefined,
     id,
-    hideAccent = false,
+    noDivider = false,
   } = props;
 
   const classes = useStyles();
@@ -48,7 +48,7 @@ const Project = (props) => {
 
         {/* Main content */}
         <Grid item xs={12}>
-          <Typography variant="h6">{props.children}</Typography>
+          <Typography variant="body1">{props.children}</Typography>
         </Grid>
 
         {/* Skills */}
@@ -66,7 +66,7 @@ const Project = (props) => {
         
 
         {
-          !hideAccent && <hr className={classes.hrAccent} />
+          !noDivider && <hr className={classes.hrAccent} />
         }
 
 
