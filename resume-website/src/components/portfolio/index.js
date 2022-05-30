@@ -84,12 +84,6 @@ function Portfolio() {
         <Projects />
         
       </div>
-
-      <Button 
-        className={classes.toTop} 
-        variant="contained"
-        onClick={() => window.scrollTo(0, 0)}
-        >Back to top &uarr;</Button>
     </React.Fragment>
   );
 }

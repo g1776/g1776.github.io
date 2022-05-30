@@ -23,7 +23,7 @@ const Project = (props) => {
       <Grid item container className={classes.project}>
         <Grid item container xs={12} md={image === undefined ? 12 : 8}>
           <Grid item xs={12}>
-            <Typography variant="h4" id={id}>{title}</Typography>
+            <Typography variant="h4" id={id} style={{marginTop: "40px"}}>{title}</Typography>
             <Typography
               variant="h5"
               style={{ paddingBottom: theme.spacing(4) }}
@@ -88,6 +88,14 @@ const Project = (props) => {
           </Grid>
         </>
         }
+
+        {/* Back to top button */}
+        <Button 
+          className={classes.toTop} 
+          variant="contained"
+          onClick={() => window.scrollTo(0, 0)}
+          >Back to top &uarr;</Button>
+        
         
 
         {
@@ -118,7 +126,6 @@ const useStyles = makeStyles((theme) => ({
     border: "none",
     height: "2px",
     width: "100%",
-    marginBottom: "40px",
     marginTop: "40px",
     background: "#153040",
   },
@@ -134,6 +141,14 @@ const useStyles = makeStyles((theme) => ({
     margin: 0, 
     padding: 0, 
     marginBottom: theme.spacing(2)
+  },
+  toTop: {
+    backgroundColor: theme.palette.primary.main,
+    "&:hover": {
+      backgroundColor: theme.palette.primary.dark,
+    },
+    color: theme.palette.common.white,
+    marginTop: theme.spacing(4),
   }
 }));
 
