@@ -64,7 +64,16 @@ function Portfolio() {
         <Header>Portfolio</Header>
 
         <Section header="Contents" hideAccent>
-          {/* <Typography component="h3" variant="h4">Click to jump to content</Typography> */}
+
+          <Button 
+              variant="contained" 
+              className={classes.btn} 
+              size="large"
+              onClick={() =>  window.open(process.env.PUBLIC_URL + '/resume.pdf', "_blank")}
+              >
+                Download resume as a PDF
+          </Button>
+
           <PortfolioAnchorLink label="Education" to="education"/>
           <PortfolioAnchorLink label="Skills" to="skills"/>
           <PortfolioAnchorLink label="Projects" to="projects"/>
@@ -134,7 +143,17 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: theme.palette.primary.main,
     },
     fontSize: "0.8rem",
-  }
+  },
+  btn: {
+    backgroundColor: theme.palette.primary.main,
+    color: theme.palette.common.white,
+    marginTop: theme.spacing(1),
+    marginBottom: theme.spacing(5),
+    "&:hover": {
+      backgroundColor: theme.palette.primary.dark,
+    },
+    
+  },
   
 }));
 

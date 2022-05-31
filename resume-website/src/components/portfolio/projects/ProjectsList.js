@@ -27,7 +27,7 @@ const projectsList = [
             <p>
               Working with IST Faculty at Penn State, I conducted research on the
               movement of elephants in sub-saharan Africa, including what
-              environmental and spatial factors affects their movement. Using
+              environmental and spatial factors affect their movement. Using
               DBSCAN and KMeans clustering algorithms, I developed a pipeline that
               yields potential "locations of interest" for elephants. This
               research led to the publication of my research paper,
@@ -58,9 +58,9 @@ const projectsList = [
   
             <p>
               While working through this project, I have learned how to manage my
-              time and outline my research goals. Each week I presented my work in
-              research group meetings, which has exposed me to how AI/ML research
-              is done, and how people ensure continued progress in self-driven
+              time and outline my research goals. Each week, I presented my work in
+              a research group meeting which has exposed me to how AI/ML research
+              is done, and how to ensure continued progress in self-driven
               work.
             </p>
   
@@ -102,7 +102,7 @@ const projectsList = [
           This project involved a state-of-the-art challenge, which was no small task for my team, even though this
           was a semester-long project. I learned a lot during the project, including best practices for image preprocessing when
           performing contour extraction and OCR tasks. I also learned the difficulty of working with large image datasets and the
-          drawbacks of synthetic image generation. Finally, this project showed me what it was like to work on a team for an extended period of time 
+          limitations of syntheticlly generated datasets. Finally, this project showed me what it was like to work on a team for an extended period of time 
           on a research project where we needed to truly start from scratch. If you would like to read about our research, you can find the full paper below.
       </p>
       
@@ -130,7 +130,7 @@ const projectsList = [
       <p>
         Any musician knows the frustration that comes with playing in tune. For many less-experienced musicians,
         intonation can be a hard to grasp concept. One technique to help with intonation is to internalize the relative
-        intonation tendencies on your instrument. However, this can be hard to memorize and to interalize trends throughout your intrstrument,
+        intonation tendencies on your instrument. However, this can be hard to memorize and to interalize trends throughout your instrument,
         let alone across multiple instruments.
       </p>
       <p>
@@ -169,24 +169,24 @@ const projectsList = [
               profesionals in the intake process. Using machine learning processes
               hosted on Azure, we processed hand-written forms and displaying
               the summarized results in custom-built dashboard. My main role
-              throughout this project has been developing the frontend, using
+              throughout this project was developing the frontend, using
               React.js with Material UI.
             </p>
             <p>
               Throughout this project I have learned a lot. My UI skills have
-              greatly improved as I try to understand the vision of my teammates
+              greatly improved as I work to understand the vision of my teammates
               and bring the product to life. We have adhered to a strict theming
-              and styling philosophy, which needs to reflected in my work. I have
-              been consulted by several UI experts, and have taken their feedback
+              and styling philosophy, which needed to be reflected in my work. Throughout the project, I was
+              consulted by several UI experts, and took their feedback
               and adjusted the product accordingly.
             </p>
             <p>
-              In addition to UI skills, I have also learned how to implement an
+              In addition to UI skills, I also learned how to implement an
               API to fetch and updated data from the backend. This was a new
-              structure to a project that I had not done before, and I needed to
-              be open to learning a new way of building a prototype. Finally, I
+              layer of complexity to a project that I had not done before, 
+              and I needed to be open to learning new methods. Finally, I
               got exposure to the world of mental health, and the unique issues
-              and poain points experienced by professionals in the field that can
+              and pain points experienced by professionals in the field that can
               be addressed with technology solutions.
             </p>
             <p>
@@ -212,7 +212,7 @@ const projectsList = [
             ]}
           >
             <p>
-              This project began as a team competing for a cash prize in the{" "}
+              This project began as a team competing in the{" "}
               <a
                 className="regularLink"
                 href="https://nittanyai.psu.edu/alliance-programs/nittany-ai-challenge/"
@@ -227,18 +227,19 @@ const projectsList = [
               noise in CT scans in order for the radiologists to more easily see
               where a tumor is. The model was then deployed on a Flask application
               built from scratch that handles file management, users, and requests
-              to the server hosting our ML model. Since then, we have developed
-              into a startup, where my official title is CTO. We are currently
-              working on further understanding the research done regarding the
-              application of Convolutional Neural Networks (CNNs) on CT scans, and
+              to the server hosting our ML model. 
+            </p>
+              
+              <p>
+              After the competition, the group worked towards becoming a startup
+              This included working on further understanding the research done regarding the
+              application of Convolutional Neural Networks on CT scans, and
               eventually implementing a solution of our own.
             </p>
             <p>
               While working on this project, I worked in a team environment of
               technical and non-technical members using a Slack channel and Zoom
-              to communicate in the age of COVID. I learned to manage a large code
-              base via Git and GitHub, and learned many technical skills,
-              including:
+              to communicate in the age of COVID.
             </p>
     </Project>,
     <Project
@@ -264,17 +265,17 @@ const projectsList = [
               The classic Chrome Dinosaur game. If you're not familiar with it,
               turn off your Wi-FI and open a new tab in Google Chrome for a surprise!
               In this project, I taught an AI how to play Chrome Dinosaur using the
-              Python package "NEAT-Python". This package uses uses a genetic-inspired algorithm
-              called NEAT (NeuroEvolution of Augmenting Topologies) to create a neural Networks
+              Python package "NEAT-Python". This package uses a genetic-inspired algorithm
+              called NEAT (NeuroEvolution of Augmenting Topologies) to create a neural networks
               that evolves over generations to get better at playing the game.
             </p>
 
             <p>
               When deciding how to approach this project, a first question I had to ask was in what environment
               I wanted to work in to train the AI agent. After doing some research, I found a version of
-              Chrome Dinosaur recreated with Pygame, which makes integration with NEAT-Python much easier.
+              Chrome Dinosaur recreated with Pygame, which made integration with NEAT-Python much easier.
               After setting up my environment, I had to decide how the agent would be trained. This involved
-              understand what inputs the agent has access to to understand the state of the game, as well as
+              understand what inputs the agent has to understand the state of the game, as well as
               what controls (in this case, jump) it has. With this set up, training began.
             </p>
 
@@ -309,7 +310,7 @@ const projectsList = [
               countless bands, orchestras, and jazz bands, playing clarinet,
               saxophone, and flute. When I started this project, I was excited to
               find a dataset created by the New Music Organizing Caucus, which
-              gathers information about gigs of musicians. I then compare this
+              gathers information about gigs of musicians. I compared this
               dataset to information gathered from the Bureau of Labor Statistics
               on musicians and singers. This allows me to validate the data
               gathered from the Caucus, and analyze the distribution of musicians
@@ -321,6 +322,14 @@ const projectsList = [
               I learned many useful skills, including ggplot graphing tools, and
               dataframe manipulating with tidyverse tools. This was my final
               project for STAT 184: Introduction to R at Penn State.
+            </p>
+
+            <p>
+              After I finished this project, I was able to present my findings to the Caucus at
+              one of their monthly meetings. This was an exciting experience, as my findings could have
+              real-world impact on how the group worked, and more specifically, how they collected their data.
+              I gave the group some feedback on their data quality, and how they could improve it by modifying their intake form.
+              I also discussed with the group (which was comprised mostly of NYC musicians) my findings and what it means for the current state of musicians and the gigs they are getting.
             </p>
     </Project>
   ]

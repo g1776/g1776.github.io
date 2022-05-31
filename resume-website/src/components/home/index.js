@@ -29,20 +29,10 @@ const Home = () => {
             one dataset at a time...
           </Typography>
 
-          <div style={{textAlign: "center"}}>
-            <Button 
-            variant="contained" 
-            className={classes.btn} 
-            size="large"
-            onClick={() =>  window.open(process.env.PUBLIC_URL + '/resume.pdf', "_blank")}
-            >
-              Download resume as a PDF
-          </Button>
-  
-          <Typography variant="h6" style={{color: theme.palette.common.black}}>
-            <b>Scroll down for more</b>
-            
-          </Typography>
+          <div className={classes.downForMore}>
+              <Typography variant="h6" >
+                <b>Scroll down for more</b>
+              </Typography>
           </div>
           
 
@@ -96,16 +86,13 @@ const useStyles = makeStyles((theme) => ({
   portfolio: {
     marginTop: theme.spacing(5),
   },
-  btn: {
-    backgroundColor: theme.palette.primary.main,
-    color: theme.palette.common.white,
-    marginTop: theme.spacing(1),
-    marginBottom: theme.spacing(5),
-    "&:hover": {
-      backgroundColor: theme.palette.primary.dark,
-    },
-    
-  },
+  downForMore: {
+    color: theme.palette.common.black,
+    textAlign: "center",
+    marginTop: theme.spacing(10),
+    marginBottom: theme.spacing(10),
+  }
+  
 }));
 
 export default Home;
