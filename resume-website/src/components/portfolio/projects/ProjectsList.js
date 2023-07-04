@@ -4,6 +4,82 @@ import { DS_MLChip, WebdevChip, OtherChip } from "../Skills";
 
 const projectsList = [
 	<Project
+		title="Capstone Project: Classifying Misleading listings on Airbnb"
+		subtitle="Classifying misleading listings on Airbnb using machine learning."
+		image="airbnb.jpeg"
+		imgWidth={"80%"}
+		id="airbnb"
+		chips={[
+			<DS_MLChip label="Python" />,
+			<DS_MLChip label="Scikit-learn" />,
+			<DS_MLChip label="Pandas" />,
+			<DS_MLChip label="Plotly & Matplotlib" />,
+			<DS_MLChip label="Streamlit" />,
+			<DS_MLChip label="Model evaluation" />,
+			<DS_MLChip label="Natural Language Processing (NLP)" />,
+		]}
+		buttonLinks={[
+			{
+				text: "Read the paper",
+				url:
+					process.env.PUBLIC_URL +
+					"/Detecting Misleading Listings through Airbnb Reviews.pdf",
+			},
+		]}
+	></Project>,
+	<Project
+		title="Bee Hotel Computer Vision Research"
+		subtitle="Detecting and identifying bees in a bee hotel using computer vision."
+		image="Bee Hotel.png"
+		imgWidth={"80%"}
+		id="bee-hotel-research"
+		chips={[
+			<DS_MLChip label="Python" />,
+			<DS_MLChip label="OpenCV" />,
+			<DS_MLChip label="Streamlit" />,
+			<DS_MLChip label="Model evaluation" />,
+		]}
+		buttonLinks={[
+			{
+				text: "Read the paper",
+				url:
+					process.env.PUBLIC_URL +
+					"/Individual_Bee_Identification_of_Solitary_Bees_using_Computer_Vision.pdf",
+			},
+		]}
+	>
+		<p>
+			This project came about from a class I took about "honeybees and humans" at Penn State,
+			which interested me so much that I reached out to the professor to see how I could
+			apply my technical skills to their entymology research! In this research, I worked with
+			the{" "}
+			<ProjectLink to="https://www.grozingerlab.com/about">
+				Grozinger lab at Penn State
+			</ProjectLink>{" "}
+			to help researchers quickly and precisely identify solitary bees in video feeds of bee
+			hotels (see the photo above for an example). I built a computer vision pipeline with
+			Python and OpenCV that detects and identifies bees in a video feed, and a Streamlit app
+			to visualize the results. I also wrote a paper about the project, which you can read by
+			clicking the button below.
+		</p>
+		<p>This project involved learning several new techniques and technologies, including:</p>
+		<ul>
+			<li>Object tracking*</li>
+			<li>Hough Transformations</li>
+			<li>Contour Detection</li>
+			<li>Image Thresholding</li>
+			<li>Kalman Filter</li>
+			<li>Text Extraction using Google's OCR too Pytesseract.</li>
+			<li>Streamlit</li>
+		</ul>
+		<p>
+			For me, one of the highlights of the project was the novel object tracking method I
+			developed, which allows the tool to track a bee's movement over multiple frames, and
+			determine when it stops flying and enters the hotel. Check out the paper for more
+			details!
+		</p>
+	</Project>,
+	<Project
 		title="Software Engineer at KCF Technologies"
 		subtitle="Building real-time data processing pipelines for industrial IoT (IIoT) applications"
 		image="KCF_Logo.jpeg"
