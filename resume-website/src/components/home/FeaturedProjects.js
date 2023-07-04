@@ -23,7 +23,7 @@ const FeaturedProjects = () => {
             This research led to the publication of my research paper, &quot;An Analysis of Elephants' Movement Data in Sub-Saharan Africa Using Clustering&quot; in the TAWIRI Conference in Arusha, Tanzania."
             image={process.env.PUBLIC_URL + "/Range Cluster Hotspots.png"}
             link="/portfolio#elephant-movement-research"
-            btnText="Read More..."
+            btnText="Read More"
             />
             </Grid>
             <Grid item xs={12} md={6}>
@@ -37,7 +37,7 @@ const FeaturedProjects = () => {
             From these extracted glyphs and labels,"
             image={process.env.PUBLIC_URL + "/CV-BAGLE.png"}
             link="/portfolio#cv-bagle"
-            btnText="Read More..."
+            btnText="Read More"
             />
             </Grid>
             <Grid item xs={12} md={6}>

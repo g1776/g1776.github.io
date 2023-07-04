@@ -31,7 +31,7 @@ const InTheNews = () => {
             image={process.env.PUBLIC_URL + "/PennStateNews.jpeg"}
             link="https://www.psu.edu/news/information-sciences-and-technology/story/ist-students-research-involves-tracking-elephant-movement/"
             externalLink
-            btnText="Read More..."
+            btnText="Read More"
             />
             </Grid>
             <Grid item xs={12} md={6}>
