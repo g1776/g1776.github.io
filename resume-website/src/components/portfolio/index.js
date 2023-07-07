@@ -3,7 +3,6 @@ import { Typography, Button } from "@material-ui/core";
 import $ from "jquery";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import { HashLink } from "react-router-hash-link";
-import { Link } from "react-router-dom";
 import useWindowSize from "../../useWindowSize";
 
 // import parts of the resume
@@ -65,10 +64,18 @@ function Portfolio() {
 				<Header>Portfolio</Header>
 
 				<Section header="Contents" hideAccent>
-					<Button variant="contained" className={classes.btn} size="large">
-						<Link to={"/resume"} className={classes.btnText}>
-							View resume
-						</Link>
+					<Button
+						variant="contained"
+						className={classes.btn}
+						size="large"
+						onClick={() =>
+							window.open(
+								process.env.PUBLIC_URL + "/Gregory Glatzer Resume.pdf",
+								"_blank"
+							)
+						}
+					>
+						View Resume as PDF
 					</Button>
 
 					<PortfolioAnchorLink label="Education" to="education" />

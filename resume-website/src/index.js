@@ -26,14 +26,6 @@ ReactDOM.render(
 							<Route path="/portfolio" component={Portfolio} />
 							<Route path="/misc/:page" component={MiscSwitch} />
 							<Route path="/contact" component={Contact} />
-							<Route
-								path="/resume"
-								component={() => {
-									window.location =
-										"https://1drv.ms/w/s!AoXy7l-tHDPwj78wxOwhX3ub1PiyAQ?e=z2FBFN"; // points to live read-only resume
-									return null;
-								}}
-							/>
 							<Redirect to="/" />
 						</Switch>
 					</div>

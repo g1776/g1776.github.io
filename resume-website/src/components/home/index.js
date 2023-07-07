@@ -20,13 +20,13 @@ const Home = () => {
 					<div className={classes.about}>
 						<Typography variant="h6">
 							<p>
-								Hello, and welcome to my portfolio site! I have a BS in Applied
-								Data Science, experience working as a professional software
-								engineer, and am currently seeking full-time employment in the
-								fields of Data Science or Software Engineering. On this site you
-								can browse through my portfolio of projects and achievements, which
-								range from data analysis, reinforcement learning, computer vision,
-								full-stack projects with NodeJS and AWS, and more!
+								I have a BS in Applied Data Science, experience working as a
+								professional software engineer, and am currently seeking full-time
+								employment in the fields of Data Science or Software Engineering.
+								On this site you can browse through my portfolio of projects and
+								achievements, which range from data analysis, reinforcement
+								learning, computer vision, full-stack projects with NodeJS and AWS,
+								and more!
 							</p>
 							<p>
 								Please enjoy browsing through my{" "}

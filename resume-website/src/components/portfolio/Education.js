@@ -12,7 +12,7 @@ function Education() {
 				The Pennsylvania State University, College of Information Sciences and Technology
 			</b>
 			<br />
-			B.S. Applied Data Science, <i>suma cum laude</i>
+			B.S. Applied Data Science, <i>summa cum laude</i>
 			<br />
 			August 2019 – May 2023
 			<br />
