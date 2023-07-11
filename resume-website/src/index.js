@@ -21,7 +21,7 @@ ReactDOM.render(
 			<CssBaseline />
 			<Router>
 				<NavProvider>
-					<div style={{ flex: "1 1 auto" }}>
+					<div style={{ flex: "1 1 auto" }} id="flex-container">
 						<Switch>
 							<Route exact path="/" component={Home} />
 							<Route path="/portfolio" component={Portfolio} />

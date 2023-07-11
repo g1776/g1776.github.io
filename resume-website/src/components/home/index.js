@@ -3,6 +3,7 @@ import { makeStyles, Container, Grid, Typography } from "@material-ui/core";
 import FeaturedProjects from "./FeaturedProjects";
 import InTheNews from "./InTheNews";
 import About from "./About";
+import { Link } from "react-router-dom";
 
 const Home = () => {
 	const classes = useStyles();
@@ -29,9 +30,10 @@ const Home = () => {
 								and more!
 							</p>
 							<p>
-								Please enjoy browsing through my <a href="/portfolio">portfolio</a>{" "}
-								or reading my <a href="/resume-ds">data science</a> and <a href="/resume-swe">software engineering</a> resumes, and feel free to
-								reach out with any questions!
+								Please enjoy browsing through my <Link to="/portfolio">portfolio</Link>{" "}
+								or reading my <Link to="/resume-ds">data science</Link> and{" "}
+								<Link to="/resume-swe">software engineering</Link> resumes, and feel
+								free to reach out with any questions!
 							</p>
 						</Typography>
 					</div>
