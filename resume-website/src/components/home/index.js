@@ -29,10 +29,9 @@ const Home = () => {
 								and more!
 							</p>
 							<p>
-								Please enjoy browsing through my{" "}
-								<a href="/#/portfolio">portfolio</a> or reading my{" "}
-								<a href="/#/resume">resume</a>, and feel free to reach out with any
-								questions!
+								Please enjoy browsing through my <a href="/portfolio">portfolio</a>{" "}
+								or reading my <a href="/resume-ds">data science</a> and <a href="/resume-swe">software engineering</a> resumes, and feel free to
+								reach out with any questions!
 							</p>
 						</Typography>
 					</div>

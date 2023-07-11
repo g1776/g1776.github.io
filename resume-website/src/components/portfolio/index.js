@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { Typography, Button } from "@material-ui/core";
+import { Typography, Button, Grid, useMediaQuery } from "@material-ui/core";
 import $ from "jquery";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import { HashLink } from "react-router-hash-link";
+import { Link } from "react-router-dom";
 import useWindowSize from "../../useWindowSize";
 
 // import parts of the resume
@@ -46,6 +47,8 @@ function Portfolio() {
 	const windowSize = useWindowSize();
 	const [blobs, setBlobs] = useState(null);
 
+	const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down("sm"));
+
 	useEffect(() => {
 		// calculate blob pcnt
 		// (what percent of the window (>100%) has content that we should render blobs in?)
@@ -64,19 +67,27 @@ function Portfolio() {
 				<Header>Portfolio</Header>
 
 				<Section header="Contents" hideAccent>
-					<Button
-						variant="contained"
-						className={classes.btn}
-						size="large"
-						onClick={() =>
-							window.open(
-								process.env.PUBLIC_URL + "/Gregory Glatzer Resume.pdf",
-								"_blank"
-							)
-						}
-					>
-						View Resume as PDF
-					</Button>
+					<Grid container spacing={2}>
+						<Grid item>
+							<Button variant="contained" className={classes.btn} size="medium">
+								<Link to={"/resume-ds"} className={classes.btnText}>
+									View Resume{isSmallScreen ? <br /> : " "}(Data Science)
+								</Link>
+							</Button>
+						</Grid>
+						<Grid item>
+							<Button
+								variant="contained"
+								className={classes.btn}
+								size="medium"
+								sx={{ ml: 1 }}
+							>
+								<Link to={"/resume-swe"} className={classes.btnText}>
+									View Resume{isSmallScreen ? <br /> : " "}(Software Engineering)
+								</Link>
+							</Button>
+						</Grid>
+					</Grid>
 
 					<PortfolioAnchorLink label="Education" to="education" />
 					<PortfolioAnchorLink label="Skills" to="skills" />
@@ -160,9 +171,8 @@ const useStyles = makeStyles((theme) => ({
 		padding: 0,
 		textDecoration: "none",
 		fontWeight: "bold",
-		textIndent: "-2em",
-		paddingLeft: "2em",
-		fontSize: "1.5rem",
+		fontSize: "1.1rem",
+		textAlign: "left",
 		"&:link": { color: theme.palette.common.white },
 		"&:visited": { color: theme.palette.common.white },
 		"&:hover": { color: theme.palette.primary.white },
