@@ -21,13 +21,7 @@ const Home = () => {
 					<div className={classes.about}>
 						<Typography variant="h6">
 							<p>
-								I have a BS in Applied Data Science, experience working as a
-								professional software engineer, and am currently seeking full-time
-								employment in the fields of Data Science or Software Engineering.
-								On this site you can browse through my portfolio of projects and
-								achievements, which range from data analysis, reinforcement
-								learning, computer vision, full-stack projects with NodeJS and AWS,
-								and more!
+								I’m a software engineer and data scientist focused on building thoughtful, high-impact products around complex data. My work sits at the intersection of full-stack development, large-scale analytics, and real-world applications—from developing precision oncology tools that integrate genomic and clinical data to building interactive platforms for exploring millions of records. I enjoy taking ideas from early concept through production, combining strong engineering fundamentals with a deep understanding of data to create systems that are both powerful and usable.
 							</p>
 							<p>
 								Please enjoy browsing through my <Link to="/portfolio">portfolio</Link>{" "}
